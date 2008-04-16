@@ -1,0 +1,175 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.sf.packtag</groupId>
+	<artifactId>packtag-parent</artifactId>
+	<version>3.3-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>packtag</name>
+	<description>pack:tag</description>
+	<url>http://sf.net/projects/packtag</url>
+	<inceptionYear>2007</inceptionYear>
+
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License (LGPL), Version 2.1</name>
+			<url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<email>danielgalan_at_users.sourceforge.net</email>
+			<id>danielgalan</id>
+			<name>Daniel Galán y Martins</name>
+			<roles>
+				<role>lead developer</role>
+			</roles>
+			<timezone>+1</timezone>
+			<url>http://www.galan.de</url>
+		</developer>
+	</developers>
+
+	<contributors>
+		<contributor>
+			<email>ryangardner_at_users.sourceforge.net</email>
+			<name>Ryan Gardner</name>
+			<roles>
+				<role>contributor</role>
+			</roles>
+			<timezone>-6</timezone>
+		</contributor>
+	</contributors>
+
+
+	<!-- Environment Settings -->
+	<issueManagement>
+		<system>SourceForge.net Bugtracker</system>
+		<url><![CDATA[http://sourceforge.net/tracker/?group_id=189328&atid=928885]]></url>
+	</issueManagement>
+
+	<scm>
+		<connection>:pserver:anonymous@packtag.cvs.sourceforge.net:/cvsroot/packtag</connection>
+		<url>http://packtag.cvs.sourceforge.net/packtag/</url>
+	</scm>
+
+	<repositories>
+		<!--
+		<repository>
+			<id>repo1</id>
+			<name>Maven Central Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+		-->
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<!-- <version>2.0.2</version> -->
+				<configuration>
+					<source>1.4</source>
+					<target>1.4</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!--
+		<build>...</build>
+		<reporting>...</reporting>
+		<repositories>...</repositories>
+		<pluginRepositories>...</pluginRepositories>
+		<distributionManagement>...</distributionManagement>
+		<profiles>...</profiles>
+		<dependencies>...</dependencies>
+	-->
+
+	<!-- Here we list of our dependencies and their version numbers.
+		In our child modules we only list the dependencies - and leave the version numbers out.
+		this makes it easy to maintain consistent versions across different modules -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- I substituted this for the jakarta one -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.4</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+				<optional>true</optional>
+			</dependency>
+
+			<dependency>
+				<groupId>rhino</groupId>
+				<artifactId>js</artifactId>
+				<version>1.6R7</version>
+				<optional>true</optional>
+			</dependency>
+
+			<!-- used in the webapp -->
+			<dependency>
+				<groupId>net.jawr</groupId>
+				<artifactId>jawr</artifactId>
+				<version>1.4</version>
+				<optional>true</optional>
+			</dependency>
+
+			<!-- latest version available in maven repositories...
+				I'll bug someone to get 2.3.5 in the repos -->
+			<dependency>
+				<groupId>com.yahoo.platform.yui</groupId>
+				<artifactId>yuicompressor</artifactId>
+				<version>2.2.5</version>
+				<optional>true</optional>
+			</dependency>
+
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.14</version>
+				<optional>true</optional>
+			</dependency>
+
+			<!-- test & support dependencies -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>3.8.1</version>
+				<scope>test</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+
+	<modules>
+		<module>packtag-core</module>
+		<module>packtag-optional</module>
+		<module>packtag-testsite</module>
+	</modules>
+
+</project>

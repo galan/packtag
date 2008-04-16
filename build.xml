@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="packtag" default="build">
+
+	<property name="application.version" value="3.3"/>
+	<property name="application.name" value="packtag"/>
+	<property name="application.jar" value="${application.name}-${application.version}.jar"/>
+	<property name="application.company" value="n/a"/>
+
+	<property name="dir.working" location="."/>
+	<property name="dir.dist" location="${dir.working}/dist"/>
+
+	<property name="dir.lib" location="${dir.working}/lib"/>
+	<property name="dir.lib.support" location="${dir.lib}/support"/>
+	<property name="dir.lib.web" location="${dir.lib}/web"/>
+
+	<property name="dir.classes" location="${dir.working}/classes"/>
+	
+	<property name="dir.main.src" location="${dir.working}/packtag-core/src/main/java"/>
+	<property name="dir.main.resources" location="${dir.working}/packtag-core/src/main/resources"/>
+	<property name="dir.webapp" location="${dir.working}/packtag-testsite/src/main/webapp"/>
+
+	<property name="dir.dist.docs" location="${dir.dist}/javadocs"/>
+	<property name="dir.dist.files" location="${dir.dist}/files"/>
+	<property name="dir.dist.meta-inf" location="${dir.dist}/META-INF"/>
+
+	<property name="file.tld" location="${dir.main.resources}/META-INF/packtag.tld"/>
+	<property name="file.web.xml" location="${dir.webapp}/WEB-INF/web.xml"/>
+	<property name="file.licence" location="${dir.working}/LICENSE.txt"/>
+	<property name="file.readme" location="${dir.working}/README.txt"/>
+	<property name="file.properties.packtag" location="${dir.webapp}/WEB-INF/packtag.properties"/>
+	<property name="file.properties.packtag.user" location="${dir.webapp}/WEB-INF/packtag.user.properties"/>
+	<property name="file.release" location="${dir.dist}/${application.name}-${application.version}.zip"/>
+	<property name="file.releases" location="${dir.working}/releases.txt"/>
+
+
+
+	<path id="classpath.packtag">
+		<fileset dir="${dir.lib.support}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${dir.lib.web}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+
+
+	<taskdef name="junit" classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask">
+		<classpath>
+			<pathelement location="${dir.lib.support}/ant-junit-1.6.5.jar"/>
+			<pathelement location="${dir.lib.support}/junit-3.8.1.jar"/>
+		</classpath>
+	</taskdef>
+
+	
+
+	<target name="build" depends="clean, compile, tests" description="builds the sources">
+	</target>
+
+
+
+	<target name="clean" description="deletes the builded sources and ">
+		<delete dir="${dir.classes}"/>
+		<mkdir dir="${dir.classes}"/>
+		<delete dir="${dir.dist}"/>
+		<mkdir dir="${dir.dist}"/>
+	</target>
+
+
+
+	<target name="compile" depends="clean, copy-resources">
+		<javac srcdir="${dir.main.src}"
+			destdir="${dir.classes}"
+			classpathref="classpath.packtag"
+			source="1.4"
+			target="1.4"
+			debug="on"
+			fork="yes"
+			encoding="ISO-8859-1"
+			debuglevel="lines,vars,source"
+			deprecation="on"/>
+	</target>
+	
+
+
+	<target name="copy-resources">
+		<copy todir="${dir.classes}">
+			<fileset dir="${dir.main.resources}">
+				<include name="**/*.properties"/>
+				<include name="**/*.tld"/>
+				<include name="**/*.gif"/>
+				<include name="**/*.jpg"/>
+				<include name="**/*.jar"/>
+				<include name="**/*.png"/>
+				<include name="**/*.licence"/>
+				<include name="**/*.txt"/>
+				<include name="**/*.css"/>
+				<include name="**/*.js"/>
+				<include name="**/*.xml"/>
+			</fileset>
+		</copy>
+	</target>
+
+
+
+	<target name="release" depends="build-release" description="creates a complete clean distribution">
+		<zip destfile="${file.release}" basedir="${dir.dist}"/>
+	</target>
+	
+	
+	
+	<target name="build-release" depends="build,build-docs">
+		<mkdir dir="${dir.dist.files}"/>
+		<mkdir dir="${dir.dist.meta-inf}"/>
+		<jar destfile="${dir.dist.files}/${application.name}-${application.version}.jar"
+		     index="false"
+		     basedir="${dir.classes}"
+		     excludes="net/sf/packtag/test/**/*">
+			<fileset dir="${dir.dist}">
+				<include name="META-INF/packtag.tld"/>
+			</fileset>
+			<manifest>
+				<attribute name="Manifest-Version" value="1.0"/>
+				<attribute name="Created-By" value="Daniel Galán y Martins"/>
+				<attribute name="Implementation-Title" value="${application.name}"/>
+				<attribute name="Implementation-Version" value="${application.version}"/>
+			</manifest>
+		</jar>
+		<delete dir="${dir.dist.meta-inf}"/>
+		<copy file="${file.licence}" todir="${dir.dist}"/>
+		<copy file="${file.properties.packtag}" todir="${dir.dist.files}"/>
+		<copy file="${file.properties.packtag.user}" todir="${dir.dist.files}"/>
+		<copy file="${file.web.xml}" todir="${dir.dist.files}"/>
+		<copy file="${file.readme}" todir="${dir.dist}"/>
+		<copy file="${file.releases}" todir="${dir.dist}"/>
+    </target>
+
+
+
+	<target name="build-docs" depends="clean">
+		<mkdir dir="${dir.dist.docs}"/>
+		<javadoc sourcepath="${dir.main.src}"
+			destdir="${dir.dist.docs}"
+			packagenames="net.sf.*"
+			classpathref="classpath.packtag"
+			source="1.4"
+			Private="off"
+			Protected="on"
+			Version="on"
+			Use="on"
+			Author="on"
+			Splitindex="on"
+			link="http://java.sun.com/j2se/1.4.2/docs/api/"
+			Windowtitle="pack:tag API Documentation"
+			Doctitle="${application.name}, Version ${application.version}"
+			header="${application.name}"
+			footer="${application.company}">
+			<link href="http://java.sun.com/j2se/1.4.2/docs/api/"/>
+		</javadoc>
+	</target>
+	
+	
+	
+	<target name="tests">
+		<junit printsummary="on" haltonfailure="on" fork="yes" dir="${dir.classes}">
+			<jvmarg value="-Dfile.encoding=ISO-8859-1"/>
+			<classpath>
+				<path refid="classpath.packtag"/>
+				<pathelement location="${dir.classes}"/>
+			</classpath>
+			<formatter type="xml"/>
+			<batchtest>
+				<fileset dir="${dir.classes}">
+					<include name="net/sf/packtag/**/*Test.class"/>
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+</project>

@@ -1,0 +1,16 @@
+*{
+	margin:0;
+	padding: 0;
+}
+/* comments  */
+html {
+	 height: 100%;
+	 width: *%;
+	 margin-bottom: 1px;
+	
+}
+body, html {
+	font: 12px/16px Georgia, Arial
+	color:#333;
+	background: #f9f9ef;
+}

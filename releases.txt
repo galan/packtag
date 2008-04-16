@@ -1,0 +1,115 @@
+- 3.3
+  - enhancement: Wildcards, you can now use "*" to include all resources in a directory,
+                 or "**" to include all resource in a directory and all subdirectories.
+  - enhancement: New CSSMinifier by Jordi Hernández Sellés, from the Jawr-Project.
+  - enhancement: Loggings use Log4j if available, elsewise Commons Logging, elsewise System.err.
+  - enhancement: External resources will be downloaded and packed locally.
+                 (Can be disabled via setting "resources.external=false")
+  - enhancement: A GzipFilter for resources (e.g. HTML) is now included
+  - documentation: Along with this version, I released two documents:
+                   "pack:tag - a packed guide to website performance optimization" and
+                   "pack:tag - one minute quick start tutorial"
+  - IMPORTANT: The setting "charset" has been renamed to "resources.charset". 
+  - fix: Patch for combined files without ending linefeed, this is a fix for IE only
+
+- 3.2
+  - enhancement: virtual path for combined resources can be specified if necessary
+                 per resourcetype (if you use the servlet cache type)
+  - fix: The popular JSMin JavaScript minifier has been updated. Thanks goes to
+         Sicke Westerdijk, for supplying a patch.
+  - fix: Resources have been reloaded to often.
+
+- 3.1
+  - fix: external resources were not mapped correctly when enabled set to false
+
+- 3.0
+  - enhancement: Relative Pathes are now possible, when you use the servlet cache type.
+  - enhancement: Resources will not be written out twice.
+                 All delivered resources are tracked in the request, to check if they
+                 are already written or not.
+  - update: YuiCompressor 2.2.5 support (Again, he changed the interfaces on a minorversion)
+  - IMPORTANT: If you used pack:tag before, you have to know about the changes, in order to
+               migrate to version 3.0:
+               - The default cache type is not any longer "file", it's "servlet"
+               - The setting "cache.servlet.path" is now obsolete, and has no meaning any longer 
+               - Please update your url-mapping in the web.xml to "*.pack"
+               - Update the packtag.tld file
+               - Please note that the attribute "compress" is renamed to "minify",
+                 because the term "compress" is ambiguous.
+
+- 2.8
+  - enhancement: Script-Tag now strict XHTML conform
+  - enhancement: MIME-Type is now delivered (when the cache-type is servlet)
+  - fix: Java 5 dependency removed
+  - fix: encoding and charset issues.
+         All minified/packed resources are now delivered as UTF-8.
+         The resources are loaded depending on the charset setting.
+         If the charset setting is omitted, the systems default charset is chosen.
+         (If you are still using Java 1.4 (and not Java >= 1.5), then Latin9 is assumed)
+
+- 2.7
+  - enhancement: caching header evaluation improved (servlet)
+
+- 2.6
+  - fix: Used Java 1.6 Method in pack:tag 2.5.
+         So if you don't use Java 1.6, you have to update from 2.5 -> 2.6
+
+- 2.5
+  - enhancement: added charset support -> use charset as propertyname in the packtag.properties configuration file
+  - update: YuiCompressor 2.1.2 support (Damn, he changed the interfaces on a minorversion)
+  - fix: added backward compatibility for web.xml settings
+  - IMPORTANT: The interface PackStrategy now has a Charset argument. 
+
+- 2.4
+  - enhancement: YuiCompressor 2.1 (net.sf.packtag.implementation.yui.YuiCompressorPackStrategy)
+  - enhancement: CSS Compressor from Isaac Schlueter (net.sf.packtag.implementation.yui.CssCompressorPackStrategy)
+  - reminder: Don't forget to migrate your web.xml settings to packtag.properties (see release 2.3)
+
+- 2.3
+  - modification: Settings are now moved into property files (/WEB-INF/packtag.properties)
+    IMPORTANT: Migrate your settings from the web.xml to the packtag.properties file
+               (remove the prefix "packtag.", check the website for more information about the settings).
+  - enhancement: Beside the /WEB-INF/packtag.properties, a second file /WEB-INF/packtag.user.properties can
+    be created (one that isn't stored in your VS) for user-defined settings (eg. to disable minification during development).
+  - experimental: YuiCompressor PackStrategy added.
+    To test it set "script.strategy" to "net.sf.packtag.implementation.yui.YuiCompressorPackStrategy".
+    Dependency: you need to download the Rhino jar from mozilla.org/rhino
+
+- 2.2
+  - enhancement: caching header improved (servlet)
+  - enhancement: servlet url-mapping can be changed now (you have to set "packtag.cache.servlet.path" to the same value)
+  - enhancement: polished the reference at http://www.galan.de/projects/packtag
+
+- 2.1
+  - fix: cachetype default (file) was missing
+
+- 2.0
+  - enhancement: Complete redesign
+  - enhancement: Combination of resources is now possible!
+  - enhancement: Resources are now updated automatically on change
+    (Note: Works only on an exploded web archive, otherwise set "packtag.resources.checktimestamps" to false)
+  - enhancement: Depending on the requesting browser, gzipped or just the minified
+    content is deliviered (on cachetype servlet)
+  - enhancement: media attribute for stylesheets
+  - enhancement: Errors could be hidden (usually not recommended)
+
+- 1.0
+  - enhancement: cachetype servlet produces, caches and delivers now packed
+    resources that are gzipped (smallest possible size)
+  - enhancement: possibility to disabled compression without removing the
+    the hashcode (parameter compress)
+  - fix: hashcode was not calculated correctly on cachetype servlet
+  - fix: cachetype setting ignores now the charactercase
+  - fix: various small fixes
+
+- 0.3
+  - fix: ContextPath was not fetched correctly in file mode 
+  - enhancement: cachetype file is now default 
+  - enhancement: "pack" is now the default file path 
+
+- 0.2
+  - first initial release
+  - enhancement: support for Apache Standard Taglib evaluations
+
+- 0.1
+  - internal developer versions

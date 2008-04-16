@@ -1,0 +1,7 @@
+.backgrounddiv {
+	background-image: url(../images/desktop.gif);
+	background-color: #ff3333;
+	border:1px solid #000;
+	width: 120px;
+	height: 90px;
+}

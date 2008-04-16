@@ -1,0 +1,1 @@
+var xPackage={myMethod:function(t,Z){var l=t*2;return l+Z;},anotherMethod:function(){var l=xPackage.myMethod(12,11.3);alert(l);},dudelidu:function(Z){var l=Z+" space text ";}};
