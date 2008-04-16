@@ -14,7 +14,7 @@
 	<property name="dir.lib.support" location="${dir.lib}/support"/>
 	<property name="dir.lib.web" location="${dir.lib}/web"/>
 
-	<property name="dir.classes" location="${dir.working}/classes"/>
+	<property name="dir.classes" location="${dir.working}/target/classes"/>
 	
 	<property name="dir.main.src" location="${dir.working}/packtag-core/src/main/java"/>
 	<property name="dir.main.resources" location="${dir.working}/packtag-core/src/main/resources"/>
