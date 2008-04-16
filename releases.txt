@@ -11,6 +11,7 @@
                    "pack:tag - one minute quick start tutorial"
   - IMPORTANT: The setting "charset" has been renamed to "resources.charset". 
   - fix: Patch for combined files without ending linefeed, this is a fix for IE only
+  - misc: pack:tags codebase moved from CVS to SVN
 
 - 3.2
   - enhancement: virtual path for combined resources can be specified if necessary
