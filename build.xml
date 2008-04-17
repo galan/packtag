@@ -19,6 +19,7 @@
 	<property name="dir.main.src" location="${dir.working}/packtag-core/src/main/java"/>
 	<property name="dir.main.resources" location="${dir.working}/packtag-core/src/main/resources"/>
 	<property name="dir.webapp" location="${dir.working}/packtag-testsite/src/main/webapp"/>
+	<property name="dir.documentation" location="${dir.working}/documentation"/>
 
 	<property name="dir.dist.docs" location="${dir.dist}/javadocs"/>
 	<property name="dir.dist.files" location="${dir.dist}/files"/>
@@ -134,6 +135,11 @@
 		<copy file="${file.web.xml}" todir="${dir.dist.files}"/>
 		<copy file="${file.readme}" todir="${dir.dist}"/>
 		<copy file="${file.releases}" todir="${dir.dist}"/>
+		<copy todir="${dir.dist}">
+			<fileset dir="${dir.documentation}">
+				<include name="*.pdf"/>
+			</fileset>
+		</copy>
     </target>
 
 
