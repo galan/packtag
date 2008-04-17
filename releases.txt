@@ -1,17 +1,17 @@
 - 3.3
   - enhancement: Wildcards, you can now use "*" to include all resources in a directory,
                  or "**" to include all resource in a directory and all subdirectories.
-  - enhancement: New CSSMinifier by Jordi Hernández Sellés, from the Jawr-Project.
-  - enhancement: Loggings use Log4j if available, elsewise Commons Logging, elsewise System.err.
+  - enhancement: New PackStrategy for CSSMinifier by Jordi Hernández Sellés, from the Jawr-Project.
   - enhancement: External resources will be downloaded and packed locally.
                  (Can be disabled via setting "resources.external=false")
-  - enhancement: A GzipFilter for resources (e.g. HTML) is now included
+  - enhancement: Loggings use Log4j if available, elsewise Commons Logging, elsewise System.err.
+  - enhancement: A GzipFilter for resources (e.g. HTML) is now included (by Jayson Falkner)
   - documentation: Along with this version, I released two documents:
                    "pack:tag - a packed guide to website performance optimization" and
                    "pack:tag - one minute quick start tutorial"
   - IMPORTANT: The setting "charset" has been renamed to "resources.charset". 
   - fix: Patch for combined files without ending linefeed, this is a fix for IE only
-  - misc: pack:tags codebase moved from CVS to SVN
+  - development: pack:tags codebase moved from CVS to SVN
 
 - 3.2
   - enhancement: virtual path for combined resources can be specified if necessary
