@@ -4,13 +4,13 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>net.sf.packtag</groupId>
-		<version>3.3-SNAPSHOT</version>
+		<version>3.4</version>
 	</parent>
 
 	<groupId>net.sf.packtag</groupId>
 	<artifactId>packtag-optional</artifactId>
 	<name>packtag-optional - meta pom for optional dependencies</name>
-	<version>3.3-SNAPSHOT</version>
+	<version>3.4</version>
 	<packaging>jar</packaging>
 	<url>http://sourceforge.net/projects/packtag/</url>
 
