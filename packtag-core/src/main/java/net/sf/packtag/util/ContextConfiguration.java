@@ -218,12 +218,16 @@ public class ContextConfiguration {
 		if (charset == null) {
 			synchronized (ContextConfiguration.class) {
 				if (charset == null) {
-					String charsetName = getProperty(context, "charset");
-					if (charsetName == null) {
-						charset = new CharsetUtil().getDefaultCharset();
+					String resourcesCharsetName = getProperty(context, "resources.charset");
+					String charsetName = getProperty(context, "charset"); // for backward compatibility
+					if (resourcesCharsetName != null) {
+						charset = Charset.forName(resourcesCharsetName);
+					}
+					else if (charsetName != null) {
+						charset = Charset.forName(charsetName);
 					}
 					else {
-						charset = Charset.forName(charsetName);
+						charset = new CharsetUtil().getDefaultCharset();
 					}
 				}
 			}
