@@ -8,7 +8,6 @@
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="packtag-core/src/main/resources" path="packtag-core/src/main/resources"/>
 	<classpathentry excluding="**" kind="src" output="packtag-core/src/test/resources" path="packtag-core/src/test/resources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v5.5"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER/modules">
@@ -16,5 +15,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/j2sdk1.4.2_12"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
