@@ -1,3 +1,6 @@
+- 3.4
+  - fix: Property "resources.charset" was not read properly
+
 - 3.3
   - enhancement: Wildcards, you can now use "*" to include all resources in a directory,
                  or "**" to include all resource in a directory and all subdirectories.
