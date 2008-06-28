@@ -22,7 +22,6 @@ package net.sf.packtag.servlet;
 
 import java.io.File;
 
-import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +36,7 @@ import net.sf.packtag.util.ContextConfiguration;
  * @author Daniel Galán y Martins
  * @version $Revision: 1.2 $
  */
-public class CleanupServlet extends HttpServlet implements Servlet {
+public class CleanupServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 8104391455171995581L;
 

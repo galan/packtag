@@ -49,7 +49,6 @@ package net.sf.packtag.servlet;
 import java.io.IOException;
 import java.util.Date;
 
-import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -71,7 +70,7 @@ import net.sf.packtag.util.RequestUtil;
  * @author Daniel Galán y Martins
  * @version $Revision: 1.10 $
  */
-public class PackServlet extends HttpServlet implements Servlet {
+public class PackServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 6588877416667767264L;
 
