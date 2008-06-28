@@ -94,6 +94,8 @@ import net.sf.packtag.util.ContextConfiguration;
  */
 public abstract class BaseTag extends BodyTagSupport {
 
+	private static final long serialVersionUID = -6185105963103670264L;
+
 	/** Well, an empty String  */
 	protected final static String EMPTY_STRING = "";
 	/** The slash Character */
