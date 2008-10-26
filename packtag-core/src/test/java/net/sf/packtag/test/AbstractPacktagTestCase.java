@@ -29,10 +29,11 @@ package net.sf.packtag.test;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
+import junit.framework.TestCase;
 import net.sf.packtag.strategy.AbstractPackStrategy;
 import net.sf.packtag.strategy.PackException;
 import net.sf.packtag.util.CharsetUtil;
-import junit.framework.TestCase;
+
 
 
 /**
@@ -46,14 +47,14 @@ public abstract class AbstractPacktagTestCase extends TestCase {
 	protected String resourceToString(final InputStream resourceAsStream) throws PackException {
 		class MockStrategy extends AbstractPackStrategy {
 
-			public String pack(final InputStream resourceAsStream, final Charset charset) throws PackException {
+			public String pack(final InputStream ras, final Charset charset) throws PackException {
 				return null;
 			}
 
 
 			// Make it public
-			public String resourceToString(final InputStream resourceAsStream) throws PackException {
-				return super.resourceToString(resourceAsStream, getDefaultCharset());
+			public String resourceToString(final InputStream ras) throws PackException {
+				return super.resourceToString(ras, getDefaultCharset());
 			}
 		}
 		MockStrategy mock = new MockStrategy();
