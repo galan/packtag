@@ -23,13 +23,13 @@ package net.sf.packtag.util;
 /**
  * Logs Events to the available Logger, Log4j, elswise System.err.
  * 
- * @author  Daniel Galán y Martins
+ * @author  Daniel Galï¿½n y Martins
  * @version $Revision: 1.2 $
  */
 public class SafeLogger {
 
-	private static Boolean log4jAvailable = Boolean.FALSE;
-	private static Boolean commonsLoggingAvailable = Boolean.FALSE;
+	private static Boolean log4jAvailable = null;
+	private static Boolean commonsLoggingAvailable = null;
 
 
 	/** Returns true if the classes from the Apache Log4j library is available */
