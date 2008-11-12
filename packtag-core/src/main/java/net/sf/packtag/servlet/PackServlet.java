@@ -67,7 +67,7 @@ import net.sf.packtag.util.RequestUtil;
  * Only needed when Servlet is choosen as cachetype (default).
  * The output is gzip-compressed.
  * 
- * @author Daniel Gal·n y Martins
+ * @author Daniel Gal√°n y Martins
  * @version $Revision: 1.10 $
  */
 public class PackServlet extends HttpServlet {
@@ -85,6 +85,51 @@ public class PackServlet extends HttpServlet {
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
 		Resource resource = PackCache.getResourceByMappedPath(request.getRequestURI());
 
+		if (resource == null) {
+			response.setStatus(404);
+		}
+		else {
+			setHeaders(response, resource);
+
+			if (isNotModifed(request, resource)) {
+				response.setStatus(304);
+			}
+			else {
+				writeResource(request, response, resource);
+			}
+		}
+	}
+
+
+	private void writeResource(final HttpServletRequest request, final HttpServletResponse response, final Resource resource) throws IOException {
+		if (RequestUtil.isGZipSupported(request)) {
+			response.setHeader(HttpHeader.CONTENT_ENCODING, HttpHeader.GZIP);
+			response.getOutputStream().write(resource.getGzippedResource());
+		}
+		else {
+			response.getWriter().write(resource.getMinifedResource());
+		}
+	}
+
+
+	/**
+	 * Check if the "If_None-Match" Header is send. When this equals to the resource, it is not
+	 * modified, and hasn't to be delivered again (Status code 304: Not modifed).
+	 * This happens when someone e.g. has the resource allready loaded, and presses the reload-button.
+	 * (Doesn't seems to work on IE6, like always)
+	 * 
+	 * @return true if the user already has the resource
+	 */
+	private boolean isNotModifed(final HttpServletRequest request, final Resource resource) {
+		StringBuffer selfMatch = new StringBuffer();
+		selfMatch.append(ETAG_PREFIX);
+		selfMatch.append(resource.getMinifiedHashcode());
+		String self = selfMatch.toString();
+		return self.equals(request.getHeader(HttpHeader.IF_NONE_MATCH));
+	}
+
+
+	private void setHeaders(final HttpServletResponse response, final Resource resource) {
 		// It won't be cached by proxies, because of the Cache-Control: private header. Let the Browser cache the resource
 		response.setHeader(HttpHeader.CACHE_CONTROL, HttpHeader.CACHE_CONTROL_PRIVATE);
 
@@ -106,26 +151,6 @@ public class PackServlet extends HttpServlet {
 
 		response.setHeader(CONTENT_TYPE, resource.getMimeType() + CHARSET_UTF8);
 		response.setHeader(HttpHeader.BRANDING_HEADER, HttpHeader.BRANDING_VALUE);
-
-		// Check if the "If_None-Match" Header is send. When this equals to the resource, it is not
-		// modified, and hasn't to be delivered again (Status code 304: Not modifed).
-		// This happens when someone e.g. has the resource allready loaded, and presses the reload-button.
-		// (Doesn't seems to work on IE6, like always)
-		StringBuffer selfMatch = new StringBuffer();
-		selfMatch.append(ETAG_PREFIX);
-		selfMatch.append(resource.getMinifiedHashcode());
-
-		if (selfMatch.toString().equals(request.getHeader(HttpHeader.IF_NONE_MATCH))) {
-			response.setStatus(304);
-		}
-		else {
-			if (RequestUtil.isGZipSupported(request)) {
-				response.setHeader(HttpHeader.CONTENT_ENCODING, HttpHeader.GZIP);
-				response.getOutputStream().write(resource.getGzippedResource());
-			}
-			else {
-				response.getWriter().write(resource.getMinifedResource());
-			}
-		}
 	}
+
 }
