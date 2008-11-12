@@ -86,7 +86,7 @@ public class PackServlet extends HttpServlet {
 		Resource resource = PackCache.getResourceByMappedPath(request.getRequestURI());
 
 		if (resource == null) {
-			response.setStatus(404);
+			response.sendError(404, "The requested packed resource was not found.");
 		}
 		else {
 			setHeaders(response, resource);
