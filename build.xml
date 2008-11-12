@@ -15,9 +15,12 @@
 	<property name="dir.lib.web" location="${dir.lib}/web"/>
 
 	<property name="dir.classes" location="${dir.working}/target/classes"/>
+	<property name="dir.testclasses" location="${dir.working}/target/test-classes"/>
 	
 	<property name="dir.main.src" location="${dir.working}/packtag-core/src/main/java"/>
+	<property name="dir.test.src" location="${dir.working}/packtag-core/src/test/java"/>
 	<property name="dir.main.resources" location="${dir.working}/packtag-core/src/main/resources"/>
+	<property name="dir.test.resources" location="${dir.working}/packtag-core/src/test/resources"/>
 	<property name="dir.webapp" location="${dir.working}/packtag-testsite/src/main/webapp"/>
 	<property name="dir.documentation" location="${dir.working}/documentation"/>
 
@@ -64,6 +67,8 @@
 	<target name="clean" description="deletes the builded sources and ">
 		<delete dir="${dir.classes}"/>
 		<mkdir dir="${dir.classes}"/>
+		<delete dir="${dir.testclasses}"/>
+		<mkdir dir="${dir.testclasses}"/>
 		<delete dir="${dir.dist}"/>
 		<mkdir dir="${dir.dist}"/>
 	</target>
@@ -74,6 +79,17 @@
 		<javac srcdir="${dir.main.src}"
 			destdir="${dir.classes}"
 			classpathref="classpath.packtag"
+			source="1.4"
+			target="1.4"
+			debug="on"
+			fork="yes"
+			encoding="ISO-8859-1"
+			debuglevel="lines,vars,source"
+			deprecation="on"/>
+		<javac srcdir="${dir.test.src}"
+			destdir="${dir.testclasses}"
+			classpathref="classpath.packtag"
+			classpath="${dir.classes}"
 			source="1.4"
 			target="1.4"
 			debug="on"
@@ -169,16 +185,18 @@
 	
 	
 	<target name="tests">
-		<junit printsummary="on" haltonfailure="on" fork="yes" dir="${dir.classes}">
+		<junit printsummary="on" haltonfailure="on" fork="yes" dir="${dir.testclasses}">
 			<jvmarg value="-Dfile.encoding=ISO-8859-1"/>
 			<classpath>
 				<path refid="classpath.packtag"/>
 				<pathelement location="${dir.classes}"/>
+				<pathelement location="${dir.testclasses}"/>
+				<pathelement location="${dir.test.resources}"/>
 			</classpath>
 			<formatter type="xml"/>
 			<batchtest>
-				<fileset dir="${dir.classes}">
-					<include name="net/sf/packtag/**/*Test.class"/>
+				<fileset dir="${dir.testclasses}">
+					<include name="net/**/*Test.class"/>
 				</fileset>
 			</batchtest>
 		</junit>
