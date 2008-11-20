@@ -1,5 +1,8 @@
 - 3.5
+  - enhancement: Caches are now pluggable (Ehcache provider is provided)
   - fix: Logger was not initialized correctly
+  - fix: Returning 404 Status Code, if requested resource is not found
+  - fix: Build Skript classpath fix
 
 - 3.4
   - fix: Property "resources.charset" was not read properly
