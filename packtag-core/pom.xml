@@ -4,18 +4,23 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>net.sf.packtag</groupId>
-		<version>3.4</version>
+		<version>3.5</version>
 	</parent>
 
 	<groupId>net.sf.packtag</groupId>
 	<artifactId>packtag-core</artifactId>
 	<name>packtag-core - packtag taglib and servlet</name>
-	<version>3.4</version>
+	<version>3.5</version>
 	<packaging>jar</packaging>
 	<url>http://sourceforge.net/projects/packtag/</url>
 
 	<dependencies>
-
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>1.5.0</version>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>net.jawr</groupId>
 			<artifactId>jawr</artifactId>
