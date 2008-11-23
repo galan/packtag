@@ -24,7 +24,8 @@
 	<property name="dir.webapp" location="${dir.working}/packtag-testsite/src/main/webapp"/>
 	<property name="dir.documentation" location="${dir.working}/documentation"/>
 
-	<property name="dir.dist.docs" location="${dir.dist}/javadocs"/>
+	<property name="dir.dist.src" location="${dir.dist}/src"/>
+	<property name="dir.dist.docs" location="${dir.dist}/javadoc"/>
 	<property name="dir.dist.files" location="${dir.dist}/files"/>
 	<property name="dir.dist.meta-inf" location="${dir.dist}/META-INF"/>
 
@@ -130,6 +131,7 @@
 	<target name="build-release" depends="build,build-docs">
 		<mkdir dir="${dir.dist.files}"/>
 		<mkdir dir="${dir.dist.meta-inf}"/>
+		<mkdir dir="${dir.dist.src}"/>
 		<jar destfile="${dir.dist.files}/${application.name}-${application.version}.jar"
 		     index="false"
 		     basedir="${dir.classes}"
@@ -154,6 +156,14 @@
 		<copy todir="${dir.dist}">
 			<fileset dir="${dir.documentation}">
 				<include name="*.pdf"/>
+			</fileset>
+		</copy>
+		<copy todir="${dir.dist.src}">
+			<fileset dir="${dir.main.src}">
+				<include name="**/*.java"/>
+			</fileset>
+			<fileset dir="${dir.main.resources}">
+				<include name="**/*.tld"/>
 			</fileset>
 		</copy>
     </target>
