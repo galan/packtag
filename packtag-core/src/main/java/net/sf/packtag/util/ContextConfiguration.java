@@ -56,13 +56,15 @@ import java.util.Properties;
 
 import javax.servlet.ServletContext;
 
+import net.sf.packtag.cache.provider.DefaultCacheProvider;
+
 
 
 /**
  * Keeps track of the configuration settings in the /WEB-INF/packtag.properties and /WEB-INF/packtag.user.properties file.
  * Note: The configuration is not longet stored in the web.xml.
  *
- * @author  Daniel Gal·n y Martins
+ * @author  Daniel Gal√°n y Martins
  * @version $Revision: 1.11 $
  */
 public class ContextConfiguration {
@@ -233,6 +235,24 @@ public class ContextConfiguration {
 			}
 		}
 		return charset;
+	}
+
+
+	public static Class getCacheProviderClass(final ServletContext context) {
+		Class result = null;
+		String cacheProvider = getProperty(context, "cache.provider", DefaultCacheProvider.class.getName());
+		try {
+			result = Class.forName(cacheProvider);
+		}
+		catch (ClassNotFoundException ex) {
+			SafeLogger.error(ContextConfiguration.class, "Could not instantiate CacheProvider", ex);
+		}
+		return result;
+	}
+
+
+	public static String getCacheProviderPath(final ServletContext context) {
+		return getProperty(context, "cache.provider.path");
 	}
 
 }
