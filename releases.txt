@@ -3,6 +3,7 @@
                  You have to define two caches:
                  "packtagResourcesAbsolutePath" and "packtagResourcesMappedPath"
   - enhancement: Returning 404 Status Code, if requested resource is not found
+  - fix: TLD body-content is now "jsp" (required for EL in <src> tags)
   - fix: Logger was not initialized correctly
   - fix: Build Skript classpath fix
 
