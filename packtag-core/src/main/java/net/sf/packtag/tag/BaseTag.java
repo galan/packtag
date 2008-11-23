@@ -89,7 +89,7 @@ import net.sf.packtag.util.ContextConfiguration;
 /**
  * Tag Base class for common Operations
  * 
- * @author Daniel Galán y Martins
+ * @author Daniel Galï¿½n y Martins
  * @version $Revision: 1.17 $
  */
 public abstract class BaseTag extends BodyTagSupport {
@@ -465,6 +465,11 @@ public abstract class BaseTag extends BodyTagSupport {
 			return false;
 		}
 		return source.startsWith(PROTOCOLL_HTTP) || source.startsWith(PROTOCOLL_HTTPS);
+	}
+
+
+	protected ServletContext getServletContext() {
+		return pageContext.getServletContext();
 	}
 
 }
