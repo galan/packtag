@@ -16,7 +16,7 @@
 
 	<property name="dir.classes" location="${dir.working}/target/classes"/>
 	<property name="dir.testclasses" location="${dir.working}/target/test-classes"/>
-	
+
 	<property name="dir.main.src" location="${dir.working}/packtag-core/src/main/java"/>
 	<property name="dir.test.src" location="${dir.working}/packtag-core/src/test/java"/>
 	<property name="dir.main.resources" location="${dir.working}/packtag-core/src/main/resources"/>
