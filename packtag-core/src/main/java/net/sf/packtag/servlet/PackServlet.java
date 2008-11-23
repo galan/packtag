@@ -83,7 +83,7 @@ public class PackServlet extends HttpServlet {
 
 
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		Resource resource = PackCache.getResourceByMappedPath(request.getRequestURI());
+		Resource resource = PackCache.getResourceByMappedPath(getServletContext(), request.getRequestURI());
 
 		if (resource == null) {
 			response.sendError(404, "The requested packed resource was not found.");
