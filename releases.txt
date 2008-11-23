@@ -2,8 +2,8 @@
   - enhancement: Caches are now pluggable (Ehcache provider is included)
                  You have to define two caches:
                  "packtagResourcesAbsolutePath" and "packtagResourcesMappedPath"
+  - enhancement: Returning 404 Status Code, if requested resource is not found
   - fix: Logger was not initialized correctly
-  - fix: Returning 404 Status Code, if requested resource is not found
   - fix: Build Skript classpath fix
 
 - 3.4
