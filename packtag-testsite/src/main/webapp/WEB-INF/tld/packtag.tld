@@ -12,7 +12,7 @@
 	<tag>
 		<name>script</name>
 		<tag-class>net.sf.packtag.tag.ScriptTag</tag-class>
-		<body-content>tagdependent</body-content>
+		<body-content>jsp</body-content>
 		<attribute>
 			<name>src</name>
 			<required>false</required>
