@@ -1,3 +1,6 @@
+- 3.6
+  - fix: TLD body-content for script is now also "jsp"
+  
 - 3.5
   - enhancement: Caches are now pluggable (Ehcache provider is included)
                  You have to define two caches:
