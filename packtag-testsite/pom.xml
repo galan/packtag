@@ -10,7 +10,7 @@
 	<artifactId>packtag-testsite</artifactId>
 	<packaging>war</packaging>
 	<name>packtag-testsite - contains various tests of packtag</name>
-	<version>3.5</version>
+	<version>3.6</version>
 	<url>http://maven.apache.org</url>
 
 	<build>
