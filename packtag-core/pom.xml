@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>net.sf.packtag</groupId>
-		<version>3.5</version>
+		<version>3.6</version>
 	</parent>
 
 	<groupId>net.sf.packtag</groupId>
