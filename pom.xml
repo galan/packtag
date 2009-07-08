@@ -41,6 +41,13 @@
 			</roles>
 			<timezone>-6</timezone>
 		</contributor>
+		<contributor>
+			<name>Haakon Sorensen</name>
+			<email>haakonsorensen_at_users.sourceforge.net</email>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</contributor>
 	</contributors>
 
 

@@ -20,6 +20,7 @@ package net.sf.packtag.util;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -80,6 +81,11 @@ public class FileFetcher {
 	public List fetchFiles(final File contextRootDirectory, final File startDirectory) {
 		List files = new ArrayList();
 		determineFiles(contextRootDirectory, startDirectory, files);
+		// Because listFiles does not return filenames in a deterministic order,
+		// make sure that we sort the files so that the hashed filename is
+		// consistent. Otherwise file globbing could be dangerous when serving
+		// content from multiple different machines.
+		Collections.sort(files);
 		return files;
 	}
 
