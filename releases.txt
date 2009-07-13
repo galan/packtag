@@ -1,3 +1,6 @@
+- 3.7
+  - fix: Combined resources order is now always the same (by Haakon Sorensen)
+
 - 3.6
   - fix: TLD body-content for script is now also "jsp"
   
