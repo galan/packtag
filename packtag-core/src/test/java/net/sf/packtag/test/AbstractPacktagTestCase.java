@@ -4,12 +4,12 @@
  * This software is published under the terms of the LGPL
  * License version 2.1, a copy of which has been included with this
  * distribution in the 'lgpl.txt' file.
- * 
+ *
  * Creation date: 17.02.2007 - 23:49:17
  * Last author:   $Author: danielgalan $
  * Last modified: $Date: 2007/10/12 21:50:40 $
  * Revision:      $Revision: 1.4 $
- * 
+ *
  * $Log: PackTestCase.java,v $
  * Revision 1.4  2007/10/12 21:50:40  danielgalan
  * default Charset solution
@@ -38,7 +38,7 @@ import net.sf.packtag.util.CharsetUtil;
 
 /**
  * class desciption. Purpose, functionality, etc..
- * 
+ *
  * @author Daniel Galán y Martins
  * @version $Revision: 1.4 $
  */
@@ -47,7 +47,7 @@ public abstract class AbstractPacktagTestCase extends TestCase {
 	protected String resourceToString(final InputStream resourceAsStream) throws PackException {
 		class MockStrategy extends AbstractPackStrategy {
 
-			public String pack(final InputStream ras, final Charset charset) throws PackException {
+			public String pack(final InputStream ras, final Charset charset, final String path) throws PackException {
 				return null;
 			}
 

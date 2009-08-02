@@ -28,14 +28,14 @@ import net.sf.packtag.implementation.yui.YuiCompressorPackStrategy;
  * Test for the YUICompressor.
  * It isn't testable, because the literatls change their name on each run.
  * 
- * @author danielgalan
+ * @author Daniel Galán y Martins
  * @version $Revision: 1.2 $
  */
 public class YuiCompressorTest extends AbstractPacktagTestCase {
 
 	public void testYui() throws Exception {
 		YuiCompressorPackStrategy strategy = new YuiCompressorPackStrategy();
-		strategy.pack(YuiCompressorTest.class.getResourceAsStream("js01.js"), getDefaultCharset());
+		strategy.pack(YuiCompressorTest.class.getResourceAsStream("js01.js"), getDefaultCharset(), null);
 		//String expectedResult = resourceToString(JsminPackStrategyTest.class.getResourceAsStream("js01-yui.js"));
 		//assertEquals(expectedResult, result);
 	}

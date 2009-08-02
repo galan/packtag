@@ -1,5 +1,8 @@
 - 3.7
-  - fix: Combined resources order is now always the same (by Haakon Sorensen)
+  - enhancement: Experimental CSS-Pathrewrite implementet (by Philipp Rosenhagen)
+                 You need to set the property "resources.rewrite" to true
+  - fix: Combined resources order keeps now the same (by Haakon Sorensen)
+  - IMPORTANT: The interface PackStrategy has a path argument now. 
 
 - 3.6
   - fix: TLD body-content for script is now also "jsp"
@@ -77,7 +80,7 @@
   - enhancement: added charset support -> use charset as propertyname in the packtag.properties configuration file
   - update: YuiCompressor 2.1.2 support (Damn, he changed the interfaces on a minorversion)
   - fix: added backward compatibility for web.xml settings
-  - IMPORTANT: The interface PackStrategy now has a Charset argument. 
+  - IMPORTANT: The interface PackStrategy has a Charset argument now. 
 
 - 2.4
   - enhancement: YuiCompressor 2.1 (net.sf.packtag.implementation.yui.YuiCompressorPackStrategy)

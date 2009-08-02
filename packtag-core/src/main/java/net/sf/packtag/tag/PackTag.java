@@ -4,12 +4,12 @@
  * This software is published under the terms of the LGPL
  * License version 2.1, a copy of which has been included with this
  * distribution in the 'lgpl.txt' file.
- * 
+ *
  * Creation date: 30.10.2007 - 09:53:32
  * Last author:   $Author: danielgalan $
  * Last modified: $Date: 2008/03/15 21:35:49 $
  * Revision:      $Revision: 1.9 $
- * 
+ *
  * $Log: PackTag.java,v $
  * Revision 1.9  2008/03/15 21:35:49  danielgalan
  * Only subdirectory, or recursivly
@@ -74,13 +74,13 @@ import net.sf.packtag.util.URIUtils;
 
 /**
  * Tag base class for resource-specific JspTags.
- * 
+ *
  * @author  Daniel Galán y Martins
  * @version $Revision: 1.9 $
  */
 public abstract class PackTag extends BaseTag {
 
-	private static final long serialVersionUID = -3714373962322644844L;
+	private static final long serialVersionUID = -3714373962322644845L;
 
 
 	/** Called method, when the tag start */
@@ -118,8 +118,8 @@ public abstract class PackTag extends BaseTag {
 
 
 	/**
-	 * Packs a single Resource, and writes the output
-	 * 
+	 * Packs a single Resource, and writes the output.
+	 *
 	 * @return true if resources have loaded or reloaded
 	 */
 	private boolean handleSingleResource(final String absolutePath, final boolean writePackedResource) throws Exception {
@@ -208,7 +208,7 @@ public abstract class PackTag extends BaseTag {
 
 	/**
 	 * Packs multiple Resources and write them as one Resource to the output.
-	 * If just one File has changed, the whole combined Resource will be reloaded. 
+	 * If just one File has changed, the whole combined Resource will be reloaded.
 	 */
 	private void handleCombinedResource() throws Exception {
 		BodyContent bc = getBodyContent();
@@ -231,7 +231,7 @@ public abstract class PackTag extends BaseTag {
 			}
 
 			// just write the combined resource if enabled, otherwise they
-			// are already written to the output by handleSingleResource(..) 
+			// are already written to the output by handleSingleResource(..)
 			if (isEnabled()) {
 				Resource resource = handleMultipleAbsolutePaths(reloaded, absolutePaths);
 				if (!isTrackingResources() || !areResourcesDelivered(absolutePaths)) {
@@ -276,13 +276,13 @@ public abstract class PackTag extends BaseTag {
 	/* Here, a combined InputStream will be constructed from the given resources. */
 	/*
 	private InputStream getCombinedResourceStream(final List absolutePaths) throws PackException {
-		InputStream[] streams = new InputStream[absolutePaths.size()];
-		for (int i = 0; i < absolutePaths.size(); i++) {
-			String absolutePath = (String)absolutePaths.get(i);
-			InputStream resourceAsStream = getResourceStream(absolutePath);
-			streams[i] = resourceAsStream;
-		}
-		return new CombinedInputStream(streams);
+	    InputStream[] streams = new InputStream[absolutePaths.size()];
+	    for (int i = 0; i < absolutePaths.size(); i++) {
+	        String absolutePath = (String)absolutePaths.get(i);
+	        InputStream resourceAsStream = getResourceStream(absolutePath);
+	        streams[i] = resourceAsStream;
+	    }
+	    return new CombinedInputStream(streams);
 	}
 	*/
 
@@ -327,7 +327,10 @@ public abstract class PackTag extends BaseTag {
 	/** Compresses the resource and stores it in the cache and as file (if cachetype is file) */
 	private Resource reloadSingleResource(final String absolutePath) throws Exception {
 		InputStream stream = getResourceStream(absolutePath);
-		String packedResource = getPackStrategyDelegate().pack(stream, getCharset());
+
+		String rewriteAbsolutePath = isUrlRewriteEnabled() ? absolutePath : null;
+		String packedResource = getPackStrategyDelegate().pack(stream, getCharset(), rewriteAbsolutePath);
+
 		stream.close();
 		Resource resource = new Resource(false, packedResource.hashCode());
 		// Needs to hold in memory for every cachetype, because of several usage in combined and wildcard resources
@@ -387,7 +390,7 @@ public abstract class PackTag extends BaseTag {
 		ByteArrayInputStream stream = new ByteArrayInputStream(minifedBuffer.toString().getBytes(UTF_8));
 
 		//InputStream stream = getCombinedResourceStream(absolutePaths);
-		String packedResource = getPackStrategyDelegate().pack(stream, getCharset());
+		String packedResource = getPackStrategyDelegate().pack(stream, getCharset(), null);
 
 		Resource resource = new Resource(true, packedResource.hashCode());
 		// Needs to hold in memory for every cachetype, because of several usage in combined and wildcard resources

@@ -19,7 +19,6 @@
  */
 package net.sf.packtag.implementation;
 
-import net.sf.packtag.implementation.IBloomCssPackStrategy;
 import net.sf.packtag.test.AbstractPacktagTestCase;
 
 
@@ -34,7 +33,7 @@ public class IBloomCssPackStrategyTest extends AbstractPacktagTestCase {
 
 	public void testCompressorOne() throws Exception {
 		IBloomCssPackStrategy strategy = new IBloomCssPackStrategy();
-		String result = strategy.pack(IBloomCssPackStrategyTest.class.getResourceAsStream("css01.css"), getDefaultCharset());
+		String result = strategy.pack(IBloomCssPackStrategyTest.class.getResourceAsStream("css01.css"), getDefaultCharset(), null);
 		String expectedResult = resourceToString(IBloomCssPackStrategyTest.class.getResourceAsStream("css01-ibloom.css"));
 		assertEquals(expectedResult, result);
 	}

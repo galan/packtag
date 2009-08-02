@@ -311,6 +311,12 @@ public abstract class BaseTag extends BodyTagSupport {
 	}
 
 
+	/** Configuration; returns if rewrite pathes is enabled */
+	protected boolean isUrlRewriteEnabled() {
+		return ContextConfiguration.isUrlRewriteEnabled(pageContext.getServletContext());
+	}
+
+
 	/** Throws an error directly (500), or hides it away (the exception will be printed as stacktrace). */
 	protected void promoteError(final String message, final Exception ex) throws JspTagException {
 		if (isHideErros()) {

@@ -33,7 +33,7 @@ public class JsminPackStrategyTest extends AbstractPacktagTestCase {
 
 	public void testCompressorOne() throws Exception {
 		JsminPackStrategy strategy = new JsminPackStrategy();
-		String result = strategy.pack(JsminPackStrategyTest.class.getResourceAsStream("js01.js"), getDefaultCharset());
+		String result = strategy.pack(JsminPackStrategyTest.class.getResourceAsStream("js01.js"), getDefaultCharset(), null);
 		String expectedResult = resourceToString(JsminPackStrategyTest.class.getResourceAsStream("js01-jsmin.js"));
 		assertEquals(expectedResult, result);
 	}
