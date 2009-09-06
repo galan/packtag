@@ -1,6 +1,8 @@
 - 3.7
   - enhancement: Experimental CSS-Pathrewrite implementet (by Philipp Rosenhagen)
                  You need to set the property "resources.rewrite" to true
+  - enhancement: New PackStrategy for CSS minifier and alphabetiser by Barry van Oudtshoorn
+  - enhancement: New PackStrategy for CSS Compressor by Andrew Roberts.
   - fix: Combined resources order keeps now the same (by Haakon Sorensen)
   - IMPORTANT: The interface PackStrategy has a path argument now. 
 
@@ -22,7 +24,7 @@
 - 3.3
   - enhancement: Wildcards, you can now use "*" to include all resources in a directory,
                  or "**" to include all resource in a directory and all subdirectories.
-  - enhancement: New PackStrategy for CSSMinifier by Jordi Hernï¿½ndez Sellï¿½s, from the Jawr-Project.
+  - enhancement: New PackStrategy for CSSMinifier by Jordi Hernández Sellés, from the Jawr-Project.
   - enhancement: External resources will be downloaded and packed locally.
                  (Can be disabled via setting "resources.external=false")
   - enhancement: Loggings use Log4j if available, elsewise Commons Logging, elsewise System.err.
