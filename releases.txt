@@ -1,3 +1,6 @@
+- 3.8
+  - enhancement: Errors will be logged to console
+
 - 3.7
   - enhancement: Experimental CSS-Pathrewrite implementet (by Philipp Rosenhagen)
                  You need to set the property "resources.rewrite" to true

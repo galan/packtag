@@ -83,6 +83,7 @@ import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
 import net.sf.packtag.util.ContextConfiguration;
+import net.sf.packtag.util.SafeLogger;
 
 
 
@@ -333,6 +334,7 @@ public abstract class BaseTag extends BodyTagSupport {
 		else {
 			throw new JspTagException(message); // , ex);
 		}
+		SafeLogger.error(getClass(), message, ex);
 	}
 
 
