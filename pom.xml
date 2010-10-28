@@ -62,8 +62,8 @@
 	</issueManagement>
 
 	<scm>
-		<connection>:pserver:anonymous@packtag.cvs.sourceforge.net:/cvsroot/packtag</connection>
-		<url>http://packtag.cvs.sourceforge.net/packtag/</url>
+		<connection>https://packtag.svn.sourceforge.net/svnroot/packtag/trunk</connection>
+		<url>https://packtag.svn.sourceforge.net/svnroot/packtag/trunk/</url>
 	</scm>
 
 	<repositories>
