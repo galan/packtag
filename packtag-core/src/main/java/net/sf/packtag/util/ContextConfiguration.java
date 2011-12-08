@@ -64,7 +64,7 @@ import net.sf.packtag.cache.provider.DefaultCacheProvider;
  * Keeps track of the configuration settings in the /WEB-INF/packtag.properties and /WEB-INF/packtag.user.properties file.
  * Note: The configuration is not longet stored in the web.xml.
  *
- * @author  Daniel Galán y Martins
+ * @author  Daniel Galï¿½n y Martins
  * @version $Revision: 1.11 $
  */
 public class ContextConfiguration {
@@ -75,7 +75,10 @@ public class ContextConfiguration {
 	public final static String CACHE_TYPE_SERVLET = "servlet";
 	public final static String CACHE_TYPE_DISABLED = "disabled";
 
-	private final static String TRUE = Boolean.TRUE.toString();
+	public final static String SCRIPT_ASYNCDEFER_XHTML = "XHTML";
+	public final static String SCRIPT_ASYNCDEFER_HTML5 = "HTML5";
+
+        private final static String TRUE = Boolean.TRUE.toString();
 	private final static String FALSE = Boolean.FALSE.toString();
 
 	private static Properties properties;
@@ -141,7 +144,18 @@ public class ContextConfiguration {
 	public static boolean isCachetypeFile(final ServletContext context) {
 		return CACHE_TYPE_FILE.equalsIgnoreCase(getCacheType(context));
 	}
+        
+	protected static String getScriptAsyncDefer(final ServletContext context) {
+		return getProperty(context, "script.asyncdefer", SCRIPT_ASYNCDEFER_XHTML);
+	}
 
+ 	public static boolean isScriptAsyncDeferXhtml(final ServletContext context) {
+		return SCRIPT_ASYNCDEFER_XHTML.equalsIgnoreCase(getScriptAsyncDefer(context));
+	}
+
+ 	public static boolean isScriptAsyncDeferHtml5(final ServletContext context) {
+		return SCRIPT_ASYNCDEFER_HTML5.equalsIgnoreCase(getScriptAsyncDefer(context));
+	}
 
 	/** Should the files timestamp be checked, so the resource is renewed on change? */
 	public static boolean isFileCheckTimestamps(final ServletContext context) {

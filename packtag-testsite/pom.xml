@@ -3,14 +3,14 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>net.sf.packtag</groupId>
-		<version>3.7</version>
+		<version>3.8</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.sf.packtag</groupId>
 	<artifactId>packtag-testsite</artifactId>
 	<packaging>war</packaging>
 	<name>packtag-testsite - contains various tests of packtag</name>
-	<version>3.7</version>
+	<version>3.8</version>
 	<url>http://maven.apache.org</url>
 
 	<build>
@@ -59,7 +59,7 @@
 			</plugin>
 		</plugins>
 	</build>
-
+        
 	<dependencies>
 		<!-- this one dependency will bring in all of the jar files that are 
 			transitively dependent... such as yui-compressor.jar... etc -->
@@ -73,5 +73,17 @@
 			<artifactId>packtag-optional</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-	</dependencies>
+                <dependency>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                    <version>2.4</version>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>jsp-api</artifactId>
+                    <version>2.0</version>
+                    <scope>provided</scope>
+                </dependency>
+    </dependencies>
 </project>

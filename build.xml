@@ -2,7 +2,7 @@
 
 <project name="packtag" default="build">
 
-	<property name="application.version" value="3.7"/>
+	<property name="application.version" value="3.8"/>
 	<property name="application.name" value="packtag"/>
 	<property name="application.jar" value="${application.name}-${application.version}.jar"/>
 	<property name="application.company" value="n/a"/>
@@ -60,7 +60,7 @@
 
 	
 
-	<target name="build" depends="clean, compile, tests" description="builds the sources">
+	<target name="build" depends="clean, compile" description="builds the sources">
 	</target>
 
 

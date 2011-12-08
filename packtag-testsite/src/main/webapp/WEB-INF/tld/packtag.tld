@@ -12,7 +12,7 @@
 	<tag>
 		<name>script</name>
 		<tag-class>net.sf.packtag.tag.ScriptTag</tag-class>
-		<body-content>jsp</body-content>
+		<body-content>JSP</body-content>
 		<attribute>
 			<name>src</name>
 			<required>false</required>
@@ -28,12 +28,22 @@
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
+		<attribute>
+			<name>async</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>defer</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
 	</tag>
 
 	<tag>
 		<name>style</name>
 		<tag-class>net.sf.packtag.tag.StyleTag</tag-class>
-		<body-content>jsp</body-content>
+		<body-content>JSP</body-content>
 		<attribute>
 			<name>src</name>
 			<required>false</required>

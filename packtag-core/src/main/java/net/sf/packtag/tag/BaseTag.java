@@ -276,6 +276,18 @@ public abstract class BaseTag extends BodyTagSupport {
 	}
 
 
+	/** Configuration; return true, if the script asyncdefer markup is XHTML */
+	protected boolean isScriptAsyncdeferXhtml() {
+		return ContextConfiguration.isScriptAsyncDeferXhtml(pageContext.getServletContext());
+	}
+
+
+	/** Configuration; return true, if the script asyncdefer markup is HTML5 */
+	protected boolean isScriptAsyncdeferHtml5() {
+		return ContextConfiguration.isScriptAsyncDeferHtml5(pageContext.getServletContext());
+	}
+
+
 	/** Configuration; returns true, if the timestamps of the files should be checked each time, they are requested */
 	protected boolean isFileCheckTimestamps() {
 		return ContextConfiguration.isFileCheckTimestamps(pageContext.getServletContext());

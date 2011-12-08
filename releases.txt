@@ -1,5 +1,9 @@
 - 3.8
+  - enhancement: Support for async & defer
+                 You can switch between XHTML and HTML5 markup via configuration
   - enhancement: Errors will be logged to console
+  - fix: TLD obeys Schema
+  - fix: IBloomCssPackStrategy is now spaces-aware (won't break selectors)
 
 - 3.7
   - enhancement: Experimental CSS-Pathrewrite implementet (by Philipp Rosenhagen)
@@ -27,7 +31,7 @@
 - 3.3
   - enhancement: Wildcards, you can now use "*" to include all resources in a directory,
                  or "**" to include all resource in a directory and all subdirectories.
-  - enhancement: New PackStrategy for CSSMinifier by Jordi Hernández Sellés, from the Jawr-Project.
+  - enhancement: New PackStrategy for CSSMinifier by Jordi Hernï¿½ndez Sellï¿½s, from the Jawr-Project.
   - enhancement: External resources will be downloaded and packed locally.
                  (Can be disabled via setting "resources.external=false")
   - enhancement: Loggings use Log4j if available, elsewise Commons Logging, elsewise System.err.
