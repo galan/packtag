@@ -8,4 +8,6 @@ To enable pack:tag in your application do the following:
 To customize pack:tag copy the packtag.properties file to your /WEB-INF directory and edit it.
 
 For detailed instructions look here:
-http://www.galan.de/projects/packtag 
+
+https://github.com/d8bitr/packtag
+
