@@ -34,6 +34,12 @@ If you want to deepen your knowledge and learn about advanced techniques, I sugg
 
 # Integration
 
+## Maven (prefered)
+Use the [maven repository and artifact](https://github.com/d8bitr/maven-repository) on github.
+https://github.com/d8bitr/maven-repository
+
+## Manual
+
 1. Download the pack:tag archive from https://github.com/d8bitr/packtag/releases and unpack
 the packtag-x.y.zip file to e.g. packtag
 2. Copy packtag/files/packtag-x.y.jar into your web-applications WEB-INF/lib directory
