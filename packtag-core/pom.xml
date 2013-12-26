@@ -5,12 +5,12 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>net.sf.packtag</groupId>
-		<version>3.9-SNAPSHOT</version>
+		<version>3.9</version>
 	</parent>
 
 	<groupId>net.sf.packtag</groupId>
 	<artifactId>packtag-core</artifactId>
-	<version>3.9-SNAPSHOT</version>
+	<version>3.9</version>
 	
 	<name>packtag-core - packtag taglib and servlet</name>
 	<packaging>jar</packaging>

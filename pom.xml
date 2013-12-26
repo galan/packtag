@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.sf.packtag</groupId>
 	<artifactId>packtag-parent</artifactId>
-	<version>3.9-SNAPSHOT</version>
+	<version>3.9</version>
 	<packaging>pom</packaging>
 
 	<name>packtag</name>
