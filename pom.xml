@@ -3,13 +3,23 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.sf.packtag</groupId>
 	<artifactId>packtag-parent</artifactId>
-	<version>3.8</version>
+	<version>3.9-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>packtag</name>
 	<description>pack:tag</description>
-	<url>http://sf.net/projects/packtag</url>
+	<url>https://github.com/d8bitr/packtag</url>
 	<inceptionYear>2007</inceptionYear>
+
+	<properties>
+		<jdk.compiler.version>1.4</jdk.compiler.version>
+	</properties>
+
+	<parent>
+		<groupId>de.galan</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.1</version>
+	</parent>
 
 	<licenses>
 		<license>
@@ -18,19 +28,6 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-
-	<developers>
-		<developer>
-			<email>danielgalan_at_users.sourceforge.net</email>
-			<id>danielgalan</id>
-			<name>Daniel Galán y Martins</name>
-			<roles>
-				<role>lead developer</role>
-			</roles>
-			<timezone>+1</timezone>
-			<url>http://www.galan.de</url>
-		</developer>
-	</developers>
 
 	<contributors>
 		<contributor>
@@ -54,26 +51,17 @@
 		</contributor>
 	</contributors>
 
-
-	<!-- Environment Settings -->
 	<issueManagement>
 		<system>SourceForge.net Bugtracker</system>
-		<url><![CDATA[http://sourceforge.net/tracker/?group_id=189328&atid=928885]]></url>
+		<url><![CDATA[https://github.com/d8bitr/packtag/issues]]></url>
 	</issueManagement>
 
 	<scm>
-		<connection>https://packtag.svn.sourceforge.net/svnroot/packtag/trunk</connection>
-		<url>https://packtag.svn.sourceforge.net/svnroot/packtag/trunk/</url>
+		<connection>git@github.com:d8bitr/packtag.git</connection>
+		<url>https://github.com/d8bitr/packtag</url>
 	</scm>
 
 	<repositories>
-		<!--
-		<repository>
-			<id>repo1</id>
-			<name>Maven Central Repository</name>
-			<url>http://repo1.maven.org/maven2</url>
-		</repository>
-		-->
 		<repository>
 			<id>maven2-repository.dev.java.net</id>
 			<name>Java.net Repository for Maven</name>
@@ -82,29 +70,6 @@
 		</repository>
 	</repositories>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<!-- <version>2.0.2</version> -->
-				<configuration>
-					<source>1.4</source>
-					<target>1.4</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-	<!--
-		<build>...</build>
-		<reporting>...</reporting>
-		<repositories>...</repositories>
-		<pluginRepositories>...</pluginRepositories>
-		<distributionManagement>...</distributionManagement>
-		<profiles>...</profiles>
-		<dependencies>...</dependencies>
-	-->
 
 	<!-- Here we list of our dependencies and their version numbers.
 		In our child modules we only list the dependencies - and leave the version numbers out.
@@ -121,13 +86,13 @@
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
 				<version>2.4</version>
-                                <scope>provided</scope>
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>jsp-api</artifactId>
 				<version>2.0</version>
-                                <scope>provided</scope>
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>taglibs</groupId>

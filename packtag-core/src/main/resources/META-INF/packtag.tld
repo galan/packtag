@@ -3,10 +3,10 @@
 <!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
 
 <taglib>
-	<tlib-version>3.5</tlib-version>
+	<tlib-version>3.9</tlib-version>
 	<jsp-version>1.2</jsp-version>
 	<short-name>pack</short-name>
-	<uri>http://packtag.sf.net</uri>
+	<uri>https://github.com/d8bitr/packtag</uri>
 	<display-name>JSP pack:tag Library</display-name>
 
 	<tag>

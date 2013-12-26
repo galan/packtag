@@ -1,16 +1,18 @@
 <?xml version="1.0"?>
 <project>
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>net.sf.packtag</groupId>
-		<version>3.8</version>
+		<version>3.9-SNAPSHOT</version>
 	</parent>
 
 	<groupId>net.sf.packtag</groupId>
 	<artifactId>packtag-core</artifactId>
+	<version>3.9-SNAPSHOT</version>
+	
 	<name>packtag-core - packtag taglib and servlet</name>
-	<version>3.8</version>
 	<packaging>jar</packaging>
 	<url>http://sourceforge.net/projects/packtag/</url>
 
@@ -69,4 +71,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 </project>

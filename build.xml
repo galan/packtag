@@ -2,7 +2,7 @@
 
 <project name="packtag" default="build">
 
-	<property name="application.version" value="3.8"/>
+	<property name="application.version" value="3.9"/>
 	<property name="application.name" value="packtag"/>
 	<property name="application.jar" value="${application.name}-${application.version}.jar"/>
 	<property name="application.company" value="n/a"/>
@@ -31,8 +31,8 @@
 
 	<property name="file.tld" location="${dir.main.resources}/META-INF/packtag.tld"/>
 	<property name="file.web.xml" location="${dir.webapp}/WEB-INF/web.xml"/>
-	<property name="file.licence" location="${dir.working}/LICENSE.txt"/>
-	<property name="file.readme" location="${dir.working}/README.txt"/>
+	<property name="file.licence" location="${dir.working}/LICENCE"/>
+	<property name="file.readme" location="${dir.working}/README.md"/>
 	<property name="file.properties.packtag" location="${dir.webapp}/WEB-INF/packtag.properties"/>
 	<property name="file.properties.packtag.user" location="${dir.webapp}/WEB-INF/packtag.user.properties"/>
 	<property name="file.release" location="${dir.dist}/${application.name}-${application.version}.zip"/>
