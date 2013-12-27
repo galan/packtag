@@ -1,3 +1,6 @@
+- 3.10
+  - ..
+
 - 3.9
   - enhancement: Maven repository, see https://github.com/d8bitr/packtag
 
