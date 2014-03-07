@@ -32,6 +32,7 @@ That's it.
 
 If you want to deepen your knowledge and learn about advanced techniques, I suggest reading "[pack:tag - a packed guide to website performance optimization](https://github.com/d8bitr/packtag/raw/master/documentation/packtag%20-%20a%20packed%20guide%20to%20website%20performance%20optimization.pdf)".
 
+
 # Integration
 
 ## Maven (preferred)
