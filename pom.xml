@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.sf.packtag</groupId>
+	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-parent</artifactId>
 	<version>3.10-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -49,11 +49,16 @@
 			<name>Philipp Rosenhagen</name>
 			<email>redclover_at_users.sourceforge.net</email>
 		</contributor>
+		<contributor>
+			<name>Chris Lottes</name>
+			<url>https://github.com/clottes</url>
+		</contributor>
+		
 	</contributors>
 
 	<issueManagement>
 		<system>SourceForge.net Bugtracker</system>
-		<url><![CDATA[https://github.com/d8bitr/packtag/issues]]></url>
+		<url>https://github.com/d8bitr/packtag/issues></url>
 	</issueManagement>
 
 	<scm>

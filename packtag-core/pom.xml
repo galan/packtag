@@ -4,17 +4,17 @@
 
 	<parent>
 		<artifactId>packtag-parent</artifactId>
-		<groupId>net.sf.packtag</groupId>
+		<groupId>de.galan.packtag</groupId>
 		<version>3.10-SNAPSHOT</version>
 	</parent>
 
-	<groupId>net.sf.packtag</groupId>
+	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-core</artifactId>
-	<version>3.10-SNAPSHOT9</version>
-	
+	<version>3.10-SNAPSHOT</version>
+
 	<name>packtag-core - packtag taglib and servlet</name>
 	<packaging>jar</packaging>
-	<url>http://sourceforge.net/projects/packtag/</url>
+	<url>https://github.com/d8bitr/packtag</url>
 
 	<dependencies>
 		<dependency>

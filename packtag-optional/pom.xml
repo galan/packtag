@@ -3,16 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>packtag-parent</artifactId>
-		<groupId>net.sf.packtag</groupId>
+		<groupId>de.galan.packtag</groupId>
 		<version>3.10-SNAPSHOT</version>
 	</parent>
 
-	<groupId>net.sf.packtag</groupId>
+	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-optional</artifactId>
 	<name>packtag-optional - meta pom for optional dependencies</name>
 	<version>3.10-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<url>http://sourceforge.net/projects/packtag/</url>
+	<url>https://github.com/d8bitr/packtag</url>
 
 	<dependencies>
 		<dependency>
