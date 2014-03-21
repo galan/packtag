@@ -29,7 +29,8 @@
 	<property name="dir.dist.files" location="${dir.dist}/files"/>
 	<property name="dir.dist.meta-inf" location="${dir.dist}/META-INF"/>
 
-	<property name="file.tld" location="${dir.main.resources}/META-INF/packtag.tld"/>
+	<property name="file.tld.sf" location="${dir.main.resources}/META-INF/packtag-sf.tld"/>
+	<property name="file.tld.gh" location="${dir.main.resources}/META-INF/packtag-github.tld"/>
 	<property name="file.web.xml" location="${dir.webapp}/WEB-INF/web.xml"/>
 	<property name="file.licence" location="${dir.working}/LICENCE"/>
 	<property name="file.readme" location="${dir.working}/README.md"/>
