@@ -1,5 +1,8 @@
 - 3.10
-  - ..
+  - fix: tld contained github uri. Now github as well as sf uri are supported:
+         https://github.com/d8bitr/packtag and http://packtag.sf.net
+         (by Chris Lottes)
+  - fix: maven group changed to de.galan.packtag
 
 - 3.9
   - enhancement: Maven repository, see https://github.com/d8bitr/packtag

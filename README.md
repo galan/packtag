@@ -6,8 +6,9 @@ A JSP Taglib for delivering minified, combined and gzip-compressed resources (Ja
 
 To use the taglib in a JSP, you have to declare it first:
 
-    <%@ taglib uri="http://packtag.sf.net" prefix="pack" %>
+    <%@ taglib uri="https://github.com/d8bitr/packtag" prefix="pack" %>
 
+(You can still use the old uri 'http://packtag.sf.net' for backward compatibility)
 
 Now you can easily pack JavaScript by using the following tag:
 
