@@ -38,7 +38,7 @@ If you want to deepen your knowledge and learn about advanced techniques, I sugg
 
 ## Maven (preferred)
 1. Use the [maven repository and artifact](https://github.com/d8bitr/maven-repository) on github.
-2. Copy the `<servlet>` and `<servlet-mapping>` from the packtag/files/web.xml into your
+2. Copy the `<servlet>` and `<servlet-mapping>` from the [web.xml](https://github.com/d8bitr/packtag/blob/master/packtag-testsite/src/main/webapp/WEB-INF/web.xml) into your
 /WEB-INF/web.xml
 
 ## Manual
