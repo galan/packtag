@@ -14,7 +14,7 @@
 
 	<name>packtag-core - packtag taglib and servlet</name>
 	<packaging>jar</packaging>
-	<url>https://github.com/d8bitr/packtag</url>
+	<url>https://github.com/galan/packtag</url>
 
 	<dependencies>
 		<dependency>

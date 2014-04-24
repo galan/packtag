@@ -8,7 +8,7 @@
 
 	<name>packtag</name>
 	<description>pack:tag</description>
-	<url>https://github.com/d8bitr/packtag</url>
+	<url>https://github.com/galan/packtag</url>
 	<inceptionYear>2007</inceptionYear>
 
 	<properties>
@@ -58,12 +58,12 @@
 
 	<issueManagement>
 		<system>SourceForge.net Bugtracker</system>
-		<url>https://github.com/d8bitr/packtag/issues></url>
+		<url>https://github.com/galan/packtag/issues></url>
 	</issueManagement>
 
 	<scm>
-		<connection>git@github.com:d8bitr/packtag.git</connection>
-		<url>https://github.com/d8bitr/packtag</url>
+		<connection>git@github.com:galan/packtag.git</connection>
+		<url>https://github.com/galan/packtag</url>
 	</scm>
 
 	<repositories>

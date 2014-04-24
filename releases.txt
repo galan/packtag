@@ -5,7 +5,7 @@
   - fix: maven group changed to de.galan.packtag
 
 - 3.9
-  - enhancement: Maven repository, see https://github.com/d8bitr/packtag
+  - enhancement: Maven repository, see https://github.com/galan/packtag
 
 - 3.8
   - enhancement: Support for async & defer

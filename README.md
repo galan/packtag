@@ -31,19 +31,19 @@ You can combine resources simply by listing them up:
 
 That's it.
 
-If you want to deepen your knowledge and learn about advanced techniques, I suggest reading "[pack:tag - a packed guide to website performance optimization](https://github.com/d8bitr/packtag/raw/master/documentation/packtag%20-%20a%20packed%20guide%20to%20website%20performance%20optimization.pdf)".
+If you want to deepen your knowledge and learn about advanced techniques, I suggest reading "[pack:tag - a packed guide to website performance optimization](https://github.com/galan/packtag/raw/master/documentation/packtag%20-%20a%20packed%20guide%20to%20website%20performance%20optimization.pdf)".
 
 
 # Integration
 
 ## Maven (preferred)
-1. Use the [maven repository and artifact](https://github.com/d8bitr/maven-repository) on github.
-2. Copy the `<servlet>` and `<servlet-mapping>` from the [web.xml](https://github.com/d8bitr/packtag/blob/master/packtag-testsite/src/main/webapp/WEB-INF/web.xml) into your
+1. Use the [maven repository and artifact](https://github.com/galan/maven-repository) on github.
+2. Copy the `<servlet>` and `<servlet-mapping>` from the [web.xml](https://github.com/galan/packtag/blob/master/packtag-testsite/src/main/webapp/WEB-INF/web.xml) into your
 /WEB-INF/web.xml
 
 ## Manual
 
-1. Download the pack:tag archive from https://github.com/d8bitr/packtag/releases and unpack
+1. Download the pack:tag archive from https://github.com/galan/packtag/releases and unpack
 the packtag-x.y.zip file to e.g. packtag
 2. Copy packtag/files/packtag-x.y.jar into your web-applications WEB-INF/lib directory
 3. Copy the `<servlet>` and `<servlet-mapping>` from the packtag/files/web.xml into your
