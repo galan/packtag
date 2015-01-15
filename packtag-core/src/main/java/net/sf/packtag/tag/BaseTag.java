@@ -121,9 +121,6 @@ public abstract class BaseTag extends BodyTagSupport {
 	/** Name of the compress attribute */
 	private final static String ATTRIBUTE_MINIFY = "minify";
 
-	/** Default file prefix */
-	private final static String FILE_PREFIX = "combined";
-
 	/** Monoton for the Apache Jakarta Taglib validation */
 	private static Boolean standardTaglibAvailable = null;
 
