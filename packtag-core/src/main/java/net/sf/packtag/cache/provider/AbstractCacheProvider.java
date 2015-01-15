@@ -33,7 +33,7 @@ public abstract class AbstractCacheProvider implements CacheProvider {
 	}
 
 
-	protected void clearDependingCombinedResources(final Resource resource) {
+	protected synchronized void clearDependingCombinedResources(final Resource resource) {
 		String absolutePath = resource.getAbsolutePath();
 		Object[] keys = getAbsolutePathKeys().toArray();
 		for (int i = 0; i < keys.length; i++) {

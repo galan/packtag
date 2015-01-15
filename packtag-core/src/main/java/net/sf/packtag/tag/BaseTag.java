@@ -131,6 +131,8 @@ public abstract class BaseTag extends BodyTagSupport {
 	/** I enabled is set to false, the original resource will be referenced */
 	private boolean enabled = true;
 
+	private String prefix = "";
+
 
 	protected String determineAbsolutePath(final String source) {
 		String result = source;
@@ -237,6 +239,18 @@ public abstract class BaseTag extends BodyTagSupport {
 		if (enabled != null) {
 			this.enabled = enabled.booleanValue();
 		}
+	}
+
+
+	/** Should the default file name be overwritten? */
+	public void setPrefix(final String prefix) {
+		this.prefix = prefix;
+	}
+
+
+	/** gets file prefix */
+	public String getPrefix() {
+		return prefix;
 	}
 
 
