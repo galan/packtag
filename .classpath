@@ -24,5 +24,25 @@
 			<attribute name="owner.project.facets" value="jst.java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/contrib/apache-log4j-1.2.15.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/custom_rhino.jar"/>
+	<classpathentry kind="lib" path="lib/contrib/jakarta-taglibs-standard-1.1.2.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/logging-log4j-1.2.14.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/rhino1_6R6.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/rhino1_6R7.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/yuicompressor-2.2.5.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/yuicompressor-2.3.5.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/yuicompressor-2.3.6.zip"/>
+	<classpathentry kind="lib" path="lib/contrib/yuicompressor-2.4.1.zip"/>
+	<classpathentry kind="lib" path="lib/support/ant-junit-1.6.5.jar"/>
+	<classpathentry kind="lib" path="lib/support/checkstyle-all-4.3.jar"/>
+	<classpathentry kind="lib" path="lib/support/ehcache-1.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/support/j2ee-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/support/jstl.jar"/>
+	<classpathentry kind="lib" path="lib/support/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/support/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/support/standard.jar"/>
+	<classpathentry kind="lib" path="lib/web/jawr-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/web/yuicompressor-2.3.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

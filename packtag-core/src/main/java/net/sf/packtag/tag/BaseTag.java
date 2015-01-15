@@ -121,6 +121,9 @@ public abstract class BaseTag extends BodyTagSupport {
 	/** Name of the compress attribute */
 	private final static String ATTRIBUTE_MINIFY = "minify";
 
+	/** Default file prefix */
+	private final static String FILE_PREFIX = "combined";
+
 	/** Monoton for the Apache Jakarta Taglib validation */
 	private static Boolean standardTaglibAvailable = null;
 
@@ -130,6 +133,8 @@ public abstract class BaseTag extends BodyTagSupport {
 	private Boolean minify = Boolean.TRUE;
 	/** I enabled is set to false, the original resource will be referenced */
 	private boolean enabled = true;
+
+	private String prefix = "";
 
 
 	protected String determineAbsolutePath(final String source) {
@@ -237,6 +242,18 @@ public abstract class BaseTag extends BodyTagSupport {
 		if (enabled != null) {
 			this.enabled = enabled.booleanValue();
 		}
+	}
+
+
+	/** Should the default file name be overwritten? */
+	public void setPrefix(final String prefix) {
+		this.prefix = prefix;
+	}
+
+
+	/** gets file prefix */
+	public String getPrefix() {
+		return prefix;
 	}
 
 
