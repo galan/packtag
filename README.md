@@ -1,3 +1,5 @@
+This is a fork for Rally specific tweaks.
+
 # pack:tag
 
 A JSP Taglib for delivering minified, combined and gzip-compressed resources (JavaScript and CSS).
