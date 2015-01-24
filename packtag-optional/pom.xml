@@ -4,15 +4,15 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
-		<version>3.11-SNAPSHOT</version>
+		<version>3.11</version>
 	</parent>
 
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-optional</artifactId>
 	<name>packtag-optional - meta pom for optional dependencies</name>
-	<version>3.11-SNAPSHOT</version>
+	<version>3.11</version>
 	<packaging>jar</packaging>
-	<url>https://github.com/d8bitr/packtag</url>
+	<url>https://github.com/galan/packtag</url>
 
 	<dependencies>
 		<dependency>

@@ -440,14 +440,11 @@ public abstract class PackTag extends BaseTag {
 				buffer.append(getContextPath());
 				buffer.append(SLASH);
 				buffer.append(getCacheServletCombinedPath(getStrategyName()));
-				String prefix = getPrefix().length() > 0 ? getPrefix() + "." : "";
-
-				if (isExternalResource(resource.getAbsolutePath())) {
-					buffer.append(prefix + "external.");
+				if (hasPrefix()) {
+					buffer.append(getPrefix());
+					buffer.append(".");
 				}
-				else {
-					buffer.append(prefix + "combined.");
-				}
+				buffer.append(isExternalResource(resource.getAbsolutePath()) ? "external." : "combined.");
 				buffer.append(getResourceExtension());
 			}
 			else {

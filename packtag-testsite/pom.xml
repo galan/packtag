@@ -5,15 +5,15 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
-		<version>3.11-SNAPSHOT</version>
+		<version>3.11</version>
 	</parent>
 
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-testsite</artifactId>
 	<packaging>war</packaging>
 	<name>packtag-testsite - contains various tests of packtag</name>
-	<version>3.11-SNAPSHOT</version>
-	<url>https://github.com/d8bitr/packtag</url>
+	<version>3.11</version>
+	<url>https://github.com/galan/packtag</url>
 
 	<build>
 		<plugins>
@@ -58,6 +58,13 @@
 						</manifest>
 					</archive>
 				</configuration>
+			</plugin>
+
+			<!-- Use to test with "mvn jetty:run", after "mvn install" on the parent -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.2.2.v20140723</version>
 			</plugin>
 		</plugins>
 	</build>

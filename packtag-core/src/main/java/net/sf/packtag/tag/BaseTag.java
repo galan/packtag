@@ -4,11 +4,11 @@
  * This software is published under the terms of the LGPL
  * License version 2.1, a copy of which has been included with this
  * distribution in the 'lgpl.txt' file.
- * 
+ *
  * Last author:   $Author: danielgalan $
  * Last modified: $Date: 2008/03/15 16:35:54 $
  * Revision:      $Revision: 1.17 $
- * 
+ *
  * $Log: BaseTag.java,v $
  * Revision 1.17  2008/03/15 16:35:54  danielgalan
  * external resource packaging can be configurated
@@ -89,8 +89,8 @@ import net.sf.packtag.util.SafeLogger;
 
 /**
  * Tag Base class for common Operations
- * 
- * @author Daniel Gal�n y Martins
+ *
+ * @author Daniel Galán y Martins
  * @version $Revision: 1.17 $
  */
 public abstract class BaseTag extends BodyTagSupport {
@@ -131,7 +131,7 @@ public abstract class BaseTag extends BodyTagSupport {
 	/** I enabled is set to false, the original resource will be referenced */
 	private boolean enabled = true;
 
-	private String prefix = "";
+	private String prefix;
 
 
 	protected String determineAbsolutePath(final String source) {
@@ -251,6 +251,11 @@ public abstract class BaseTag extends BodyTagSupport {
 	/** gets file prefix */
 	public String getPrefix() {
 		return prefix;
+	}
+
+
+	public boolean hasPrefix() {
+		return getPrefix() != null && (getPrefix().length() > 0);
 	}
 
 
@@ -453,7 +458,7 @@ public abstract class BaseTag extends BodyTagSupport {
 	 * (and better it doesn't has dependencies to those).
 	 * BUT it is therefore fragile (No comments (if they are in the src-tag) nor whitespaces are allowed in the
 	 * tags (e.g. &lt;src &gt; wouldn't work).
-	 * 
+	 *
 	 * @return A List with shortQualifiedPaths
 	 */
 	protected List parseBody(final String bodyString) {

@@ -1,3 +1,7 @@
+- 3.11
+  - enhancement: Possibility to add a prefix to a combined resource. This helps
+                 identifing the packed resource in the browser (by pherris@github)
+
 - 3.10
   - fix: tld contained github uri. Now github as well as sf uri are supported:
          https://github.com/d8bitr/packtag and http://packtag.sf.net

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-parent</artifactId>
-	<version>3.11-SNAPSHOT</version>
+	<version>3.11</version>
 	<packaging>pom</packaging>
 
 	<name>packtag</name>
@@ -48,12 +48,24 @@
 		<contributor>
 			<name>Philipp Rosenhagen</name>
 			<email>redclover_at_users.sourceforge.net</email>
+			<roles>
+				<role>contributor</role>
+			</roles>
 		</contributor>
 		<contributor>
 			<name>Chris Lottes</name>
 			<url>https://github.com/clottes</url>
+			<roles>
+				<role>contributor</role>
+			</roles>
 		</contributor>
-		
+		<contributor>
+			<name>pherris</name>
+			<url>https://github.com/pherris</url>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</contributor>
 	</contributors>
 
 	<issueManagement>
