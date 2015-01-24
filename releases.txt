@@ -1,6 +1,8 @@
 - 3.11
   - enhancement: Possibility to add a prefix to a combined resource. This helps
                  identifing the packed resource in the browser (by pherris@github)
+  - fix: The uri for the taglib is now https://github.com/galan/packtag
+         (old uris are still supported)
 
 - 3.10
   - fix: tld contained github uri. Now github as well as sf uri are supported:
