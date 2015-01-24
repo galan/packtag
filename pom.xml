@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-parent</artifactId>
-	<version>3.11</version>
+	<version>3.12-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>packtag</name>
