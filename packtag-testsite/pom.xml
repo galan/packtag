@@ -17,32 +17,6 @@
 
 	<build>
 		<plugins>
-			<!--
-				<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.1</version>
-				<executions>
-				<execution>
-				<phase>compile</phase>
-				<goals>
-				<goal>run</goal>
-				</goals>
-				<configuration>
-				<tasks>
-				<echo>${project.build.directory}, ${basedir}</echo>
-				<copy file="file1" tofile="file2" />
-				</tasks>
-				</configuration>
-				</execution>
-				</executions>
-				</plugin>
-			-->
-
-			<!-- If you want to use the default war packaging settings, 
-				this entire <plugins> section can be deleted.     -->
-			<!-- You only need to keep it if you want to customize some of
-				the settings -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
