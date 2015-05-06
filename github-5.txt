@@ -1,0 +1,16 @@
+2015-02-19 12:34:35,077 ERROR [net.sf.packtag.implementation.JsminPackStrategy] Exception is class net.sf.packtag.implementation.JSMin$UnterminatedRegExpLiteralException
+net.sf.packtag.implementation.JSMin$UnterminatedRegExpLiteralException
+	at net.sf.packtag.implementation.JSMin.action(JSMin.java:226)
+	at net.sf.packtag.implementation.JSMin.jsmin(JSMin.java:306)
+	at net.sf.packtag.implementation.JsminPackStrategy.pack(JsminPackStrategy.java:53)
+	at net.sf.packtag.tag.PackTag.reloadSingleResource(PackTag.java:332)
+	at net.sf.packtag.tag.PackTag.handleSingleResourceDelegate(PackTag.java:163)
+	at net.sf.packtag.tag.PackTag.handleSingleResource(PackTag.java:135)
+	at net.sf.packtag.tag.PackTag.handleCombinedResource(PackTag.java:227)
+	at net.sf.packtag.tag.PackTag.doEndTag(PackTag.java:103)
+	at org.apache.jsp.github_002d5_jsp._jspx_meth_pack_005fscript_005f0(github_002d5_jsp.java:142)
+	at org.apache.jsp.github_002d5_jsp._jspService(github_002d5_jsp.java:86)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+
+	http://compressorrater.thruhere.net/
+	

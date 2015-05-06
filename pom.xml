@@ -23,8 +23,8 @@
 
 	<licenses>
 		<license>
-			<name>GNU Lesser General Public License (LGPL), Version 2.1</name>
-			<url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
@@ -62,6 +62,13 @@
 		<contributor>
 			<name>pherris</name>
 			<url>https://github.com/pherris</url>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</contributor>
+		<contributor>
+			<name>liggiotti</name>
+			<url>https://github.com/liggiotti</url>
 			<roles>
 				<role>contributor</role>
 			</roles>

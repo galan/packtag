@@ -12,7 +12,7 @@
 	<pack:script src="js/dummy.js" async="true"/>
 	<pack:script src="js/dummyCompress.js" minify="false" defer="true"/>
         
-       	<pack:script defer="true">
+    <pack:script defer="true">
 		<src>js/dummy.js</src>
 		<src>js/dummyCompress.js</src>
 	</pack:script>
