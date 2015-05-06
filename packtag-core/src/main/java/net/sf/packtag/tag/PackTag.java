@@ -67,6 +67,7 @@ import net.sf.packtag.implementation.DisabledPackStrategy;
 import net.sf.packtag.strategy.PackException;
 import net.sf.packtag.strategy.PackStrategy;
 import net.sf.packtag.util.FileFetcher;
+import net.sf.packtag.util.FilenameUtils;
 import net.sf.packtag.util.HttpHeader;
 import net.sf.packtag.util.URIUtils;
 
@@ -412,13 +413,13 @@ public abstract class PackTag extends BaseTag {
 
 	/** Saves the minified resource to disk */
 	private void storeFile(final Resource resource, final String packedResource) throws IOException {
-		String cacheFilePath = getCacheFilePath() + SLASH;
-		String realPath = pageContext.getServletContext().getRealPath(SLASH) + cacheFilePath;
+		String cacheFilePath = SLASH + getCacheFilePath() + SLASH;
+		String realPath = pageContext.getServletContext().getRealPath(cacheFilePath);
 		File fileRealPath = new File(realPath);
 		if (!fileRealPath.exists()) {
 			fileRealPath.mkdirs();
 		}
-		File fileAbsolutePath = new File(realPath + determineFileName(resource));
+		File fileAbsolutePath = new File(FilenameUtils.concat(realPath, determineFileName(resource)));
 		if (fileAbsolutePath.exists()) {
 			fileAbsolutePath.delete();
 		}
