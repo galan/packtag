@@ -1,26 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/01/12 14:22:32 $
- * Revision:      $Revision: 1.3 $
- * 
- * $Log: JSMin.java,v $
- * Revision 1.3  2008/01/12 14:22:32  danielgalan
- * Latest Patch to JSMin minifier supplied by Sicke Westerdijk
- * (See here for more information: http://sourceforge.net/tracker/index.php?func=detail&aid=1865077&group_id=189328&atid=928887 )
- *
- * Revision 1.2  2007/10/13 20:19:32  danielgalan
- * Moved JSMin away from Inputstreams to Reader/Writer
- *
- * Revision 1.1  2007/04/22 19:04:25  danielgalan
- * pack.tag moved from subversion to good old CVS
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.implementation;
 
 import java.io.IOException;
@@ -32,12 +10,12 @@ import java.io.Writer;
 
 /**
  * Pack algorithm for JavaScript
- * 
- * @author Daniel Gal·n y Martins
+ *
+ * @author Daniel Gal√°n y Martins
  * @author John Reilly
  * @author Douglas Crockford
  * @version $Revision: 1.3 $
- * 
+ *
  * JSMin.java 2006-02-13
  *
  * Updated 2007-08-20 with updates from jsmin.c (2007-05-22)
@@ -45,29 +23,29 @@ import java.io.Writer;
  * and here http://www.inconspicuous.org/2007/08/21/update-to-jsminjava/)
  *
  * Copyright (c) 2006 John Reilly (www.inconspicuous.org)
- * 
+ *
  * This work is a translation from C to Java of jsmin.c published by
- * Douglas Crockford.  Permission is hereby granted to use the Java 
+ * Douglas Crockford.  Permission is hereby granted to use the Java
  * version under the same conditions as the jsmin.c on which it is
- * based.  
- * 
- * 
+ * based.
+ *
+ *
  * jsmin.c 2003-04-21
- * 
+ *
  * Copyright (c) 2002 Douglas Crockford (www.crockford.com)
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * The Software shall be used for Good, not Evil.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE

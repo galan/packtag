@@ -1,17 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Creation date: 15.11.2008 - 09:55:05
- * Last author:   $Author: danielgalan $
- * Last modified: $Date:$
- * Revision:      $Revision:$
- * 
- * $Log:$
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.cache.provider;
 
 import java.util.HashSet;
@@ -27,9 +14,8 @@ import net.sf.packtag.cache.Resource;
 
 /**
  * Basic ehcache specific cache provider implementation
- * 
+ *
  * @author  Daniel Galán y Martins
- * @version $Revision:$
  */
 public abstract class AbstractEhcacheProvider extends AbstractCacheProvider {
 

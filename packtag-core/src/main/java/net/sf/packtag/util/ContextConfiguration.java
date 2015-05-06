@@ -1,53 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- *
- * Creation date: 10.07.2007 - 23:52:52
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 16:30:45 $
- * Revision:      $Revision: 1.11 $
- *
- * $Log: ContextConfiguration.java,v $
- * Revision 1.11  2008/03/15 16:30:45  danielgalan
- * external resource packaging can be configurated
- *
- * Revision 1.10  2008/02/10 20:59:49  danielgalan
- * SafeLogger
- *
- * Revision 1.9  2008/01/26 12:53:35  danielgalan
- * virtual path for combined resources (per resourcetype)
- *
- * Revision 1.8  2008/01/22 22:17:44  danielgalan
- * new setting for the virtual servlet path for combined resources
- *
- * Revision 1.7  2007/11/06 23:12:40  danielgalan
- * CacheServletPath is obsolete
- *
- * Revision 1.6  2007/10/31 09:24:19  danielgalan
- * configuration for isTrackingResources
- *
- * Revision 1.5  2007/10/12 21:50:40  danielgalan
- * default Charset solution
- *
- * Revision 1.4  2007/09/23 14:37:31  danielgalan
- * Added charset support
- *
- * Revision 1.3  2007/09/23 13:54:24  danielgalan
- * Applied backward compatibility patch from qxo@users.sourceforge.net
- *
- * Revision 1.2  2007/08/27 22:50:21  danielgalan
- * settings into property files instead of web.xml
- *
- * Revision 1.1  2007/07/11 23:01:31  danielgalan
- * - 2.2
- *   - enhancement: caching header improved (servlet)
- *   - servlet url-mapping can be changed now (you have to set "packtag.cache.servlet.path" to the same value)
- *   - enhancement: polished the reference at http://www.galan.de/projects/packtag
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.util;
 
 import java.io.InputStream;
@@ -64,8 +15,7 @@ import net.sf.packtag.cache.provider.DefaultCacheProvider;
  * Keeps track of the configuration settings in the /WEB-INF/packtag.properties and /WEB-INF/packtag.user.properties file.
  * Note: The configuration is not longet stored in the web.xml.
  *
- * @author  Daniel Gal�n y Martins
- * @version $Revision: 1.11 $
+ * @author  Daniel Galán y Martins
  */
 public class ContextConfiguration {
 
@@ -78,7 +28,7 @@ public class ContextConfiguration {
 	public final static String SCRIPT_ASYNCDEFER_XHTML = "XHTML";
 	public final static String SCRIPT_ASYNCDEFER_HTML5 = "HTML5";
 
-        private final static String TRUE = Boolean.TRUE.toString();
+	private final static String TRUE = Boolean.TRUE.toString();
 	private final static String FALSE = Boolean.FALSE.toString();
 
 	private static Properties properties;
@@ -144,18 +94,22 @@ public class ContextConfiguration {
 	public static boolean isCachetypeFile(final ServletContext context) {
 		return CACHE_TYPE_FILE.equalsIgnoreCase(getCacheType(context));
 	}
-        
+
+
 	protected static String getScriptAsyncDefer(final ServletContext context) {
 		return getProperty(context, "script.asyncdefer", SCRIPT_ASYNCDEFER_XHTML);
 	}
 
- 	public static boolean isScriptAsyncDeferXhtml(final ServletContext context) {
+
+	public static boolean isScriptAsyncDeferXhtml(final ServletContext context) {
 		return SCRIPT_ASYNCDEFER_XHTML.equalsIgnoreCase(getScriptAsyncDefer(context));
 	}
 
- 	public static boolean isScriptAsyncDeferHtml5(final ServletContext context) {
+
+	public static boolean isScriptAsyncDeferHtml5(final ServletContext context) {
 		return SCRIPT_ASYNCDEFER_HTML5.equalsIgnoreCase(getScriptAsyncDefer(context));
 	}
+
 
 	/** Should the files timestamp be checked, so the resource is renewed on change? */
 	public static boolean isFileCheckTimestamps(final ServletContext context) {

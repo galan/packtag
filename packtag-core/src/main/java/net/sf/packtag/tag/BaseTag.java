@@ -1,71 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- *
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 16:35:54 $
- * Revision:      $Revision: 1.17 $
- *
- * $Log: BaseTag.java,v $
- * Revision 1.17  2008/03/15 16:35:54  danielgalan
- * external resource packaging can be configurated
- *
- * Revision 1.16  2008/01/26 12:53:28  danielgalan
- * virtual path for combined resources (per resourcetype)
- *
- * Revision 1.15  2008/01/22 22:17:44  danielgalan
- * new setting for the virtual servlet path for combined resources
- *
- * Revision 1.14  2007/11/19 19:52:29  danielgalan
- * fix for external resources
- *
- * Revision 1.13  2007/11/12 22:57:24  danielgalan
- * renamed sqp to absolutePath and fqp to mappedPath
- *
- * Revision 1.12  2007/11/06 23:10:44  danielgalan
- * Switch to new URI-semantic
- *
- * Revision 1.11  2007/10/31 09:21:30  danielgalan
- * extracted helper methods from logic
- *
- * Revision 1.10  2007/10/13 20:22:42  danielgalan
- * Mimetype abstraction and UTF-8 target encoding
- *
- * Revision 1.9  2007/10/12 20:57:02  danielgalan
- * Files before branch
- *
- * Revision 1.8  2007/09/25 22:12:36  danielgalan
- * Charset (Java 1.6 Method used): See here
- * http://sourceforge.net/forum/forum.php?thread_id=1831376&forum_id=665160
- *
- * Revision 1.7  2007/09/23 18:48:37  danielgalan
- * Characterset
- *
- * Revision 1.6  2007/09/23 14:37:31  danielgalan
- * Added charset support
- *
- * Revision 1.5  2007/08/27 22:51:11  danielgalan
- * settings into property files instead of web.xml
- *
- * Revision 1.4  2007/07/11 23:01:31  danielgalan
- * - 2.2
- *   - enhancement: caching header improved (servlet)
- *   - servlet url-mapping can be changed now (you have to set "packtag.cache.servlet.path" to the same value)
- *   - enhancement: polished the reference at http://www.galan.de/projects/packtag
- *
- * Revision 1.3  2007/05/17 11:55:44  danielgalan
- * fix: no default cachetype was set *do'h*
- *
- * Revision 1.2  2007/05/02 21:29:19  danielgalan
- * last fixes for 2.0, attribute media
- *
- * Revision 1.1  2007/04/22 19:04:24  danielgalan
- * pack.tag moved from subversion to good old CVS
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.tag;
 
 import java.io.ByteArrayOutputStream;
@@ -91,7 +24,6 @@ import net.sf.packtag.util.SafeLogger;
  * Tag Base class for common Operations
  *
  * @author Daniel Galán y Martins
- * @version $Revision: 1.17 $
  */
 public abstract class BaseTag extends BodyTagSupport {
 

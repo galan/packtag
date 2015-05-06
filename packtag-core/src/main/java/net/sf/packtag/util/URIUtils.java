@@ -1,27 +1,10 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Creation date: 04.11.2007 - 19:45:56
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2007/11/06 23:11:55 $
- * Revision:      $Revision: 1.1 $
- * 
- * $Log: URIUtils.java,v $
- * Revision 1.1  2007/11/06 23:11:55  danielgalan
- * Helperclass for rewriting the URIs
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.util;
 
 /**
  * Helps finding the absolute location of resources
- * 
- * @author  danielgalan
- * @version $Revision: 1.1 $
+ *
+ * @author  Daniel Galán y Martins
  */
 public class URIUtils {
 

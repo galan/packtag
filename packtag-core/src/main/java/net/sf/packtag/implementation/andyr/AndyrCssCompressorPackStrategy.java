@@ -1,17 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Creation date: 06.09.2009 - 17:46:23
- * Last author:   $Author: danielgalan $
- * Last modified: $Date:$
- * Revision:      $Revision:$
- * 
- * $Log:$
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.implementation.andyr;
 
 import java.io.IOException;
@@ -27,9 +14,8 @@ import net.sf.packtag.strategy.PackException;
 /**
  * Wraps the CssCompressor by Andrew Roberts, published under BSD.
  * http://www.andy-roberts.net/software/csscompressor
- * 
- * @author  tentacle
- * @version $Revision:$
+ *
+ * @author Daniel Galán y Martins
  */
 public class AndyrCssCompressorPackStrategy extends CssRewritePackStrategy {
 

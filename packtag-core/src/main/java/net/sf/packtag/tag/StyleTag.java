@@ -1,37 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/01/26 12:53:27 $
- * Revision:      $Revision: 1.7 $
- * 
- * $Log: StyleTag.java,v $
- * Revision 1.7  2008/01/26 12:53:27  danielgalan
- * virtual path for combined resources (per resourcetype)
- *
- * Revision 1.6  2007/11/21 20:02:26  danielgalan
- * Don't force a charset, when pack:tag is not enabled
- *
- * Revision 1.5  2007/10/31 09:23:11  danielgalan
- * extends now PackTag
- *
- * Revision 1.4  2007/10/13 20:23:46  danielgalan
- * added charset support, MIME-Type abstraction
- *
- * Revision 1.3  2007/08/27 22:51:11  danielgalan
- * settings into property files instead of web.xml
- *
- * Revision 1.2  2007/05/02 21:29:19  danielgalan
- * last fixes for 2.0, attribute media
- *
- * Revision 1.1  2007/04/22 19:04:24  danielgalan
- * pack.tag moved from subversion to good old CVS
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.tag;
 
 import javax.servlet.jsp.JspWriter;
@@ -43,9 +10,8 @@ import net.sf.packtag.strategy.PackStrategy;
 
 /**
  * JSP Tag for compressing Cascading Style Sheet resources.
- * 
- * @author Daniel Gal·n y Martins
- * @version $Revision: 1.7 $
+ *
+ * @author Daniel Gal√°n y Martins
  */
 public class StyleTag extends PackTag {
 

@@ -1,32 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Creation date: 10.04.2007 - 22:49:25
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 16:32:16 $
- * Revision:      $Revision: 1.5 $
- * 
- * $Log: Resource.java,v $
- * Revision 1.5  2008/03/15 16:32:16  danielgalan
- * Resources can keep information about wildcard gathered resources
- *
- * Revision 1.4  2007/11/12 22:57:24  danielgalan
- * renamed sqp to absolutePath and fqp to mappedPath
- *
- * Revision 1.3  2007/10/13 15:00:49  danielgalan
- * Field for MIME-Type added
- *
- * Revision 1.2  2007/05/02 21:38:37  danielgalan
- * alias to name
- *
- * Revision 1.1  2007/04/22 19:04:21  danielgalan
- * pack.tag moved from subversion to good old CVS
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.cache;
 
 import java.io.Serializable;
@@ -35,9 +7,8 @@ import java.io.Serializable;
 
 /**
  * Represents a Cached Resource
- * 
- * @author  Daniel Gal·n y Martins
- * @version $Revision: 1.5 $
+ *
+ * @author  Daniel Gal√°n y Martins
  */
 public class Resource implements Cloneable, Serializable {
 

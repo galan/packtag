@@ -1,37 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 16:37:07 $
- * Revision:      $Revision: 1.7 $
- * 
- * $Log: ScriptTag.java,v $
- * Revision 1.7  2008/03/15 16:37:07  danielgalan
- * cleaning
- *
- * Revision 1.6  2008/01/26 12:53:28  danielgalan
- * virtual path for combined resources (per resourcetype)
- *
- * Revision 1.5  2007/11/21 20:02:26  danielgalan
- * Don't force a charset, when pack:tag is not enabled
- *
- * Revision 1.4  2007/10/31 09:23:11  danielgalan
- * extends now PackTag
- *
- * Revision 1.3  2007/10/13 20:23:34  danielgalan
- * added charset support, MIME-Type abstraction
- *
- * Revision 1.2  2007/10/02 21:21:04  danielgalan
- * Make JavaScript-Tag XHTML conform
- *
- * Revision 1.1  2007/04/22 19:04:24  danielgalan
- * pack.tag moved from subversion to good old CVS
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.tag;
 
 import javax.servlet.jsp.JspWriter;
@@ -43,9 +10,8 @@ import net.sf.packtag.strategy.PackStrategy;
 
 /**
  * JSP Tag for compressing JavaScript resources.
- * 
- * @author Daniel Gal·n y Martins
- * @version $Revision: 1.7 $
+ *
+ * @author Daniel Gal√°n y Martins
  */
 public class ScriptTag extends PackTag {
 
@@ -62,12 +28,12 @@ public class ScriptTag extends PackTag {
 	/** Name of the defer attribute */
 	private final static String ATTRIBUTE_DEFER = "defer";
 
-        /**
-	 * The charset is needed for IE to process utf-8 (IE isn't a webbrowser .. it's a disease)
-	 * All Browser (Firefox, Opera, .. evaluate the Content-Type header for each included resource (servlet).
-	 * But for the IE, the charset has to be specified in the link-reference :-/
-	 * Well, at least it's usefull for the cache.type "file" ;)
-	 */
+	/**
+	* The charset is needed for IE to process utf-8 (IE isn't a webbrowser .. it's a disease)
+	* All Browser (Firefox, Opera, .. evaluate the Content-Type header for each included resource (servlet).
+	* But for the IE, the charset has to be specified in the link-reference :-/
+	* Well, at least it's usefull for the cache.type "file" ;)
+	*/
 	private final static String OUTPUT_CHARSET = " charset=\"utf-8\"";
 	private final static String OUTPUT_ASYNC_XHTML = " async=\"async\"";
 	private final static String OUTPUT_DEFER_XHTML = " defer=\"defer\"";
@@ -83,6 +49,7 @@ public class ScriptTag extends PackTag {
 	/** If defer is set to true, the defer attribute is added */
 	private Boolean defer = Boolean.FALSE;
 
+
 	protected void writeResouce(final JspWriter writer, final String path) throws Exception {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(SCRIPT_START);
@@ -92,20 +59,20 @@ public class ScriptTag extends PackTag {
 			buffer.append(OUTPUT_CHARSET);
 		}
 		if (Boolean.TRUE.equals(isAsync())) {
-                    if (isScriptAsyncdeferXhtml()) {
-			buffer.append(OUTPUT_ASYNC_XHTML);
-                    }
-                    else {
-			buffer.append(OUTPUT_ASYNC_HTML5);
-                    }
+			if (isScriptAsyncdeferXhtml()) {
+				buffer.append(OUTPUT_ASYNC_XHTML);
+			}
+			else {
+				buffer.append(OUTPUT_ASYNC_HTML5);
+			}
 		}
 		if (Boolean.TRUE.equals(isDefer())) {
-                    if (isScriptAsyncdeferXhtml()) {
-			buffer.append(OUTPUT_DEFER_XHTML);
-                    }
-                    else {
-			buffer.append(OUTPUT_DEFER_HTML5);
-                    }
+			if (isScriptAsyncdeferXhtml()) {
+				buffer.append(OUTPUT_DEFER_XHTML);
+			}
+			else {
+				buffer.append(OUTPUT_DEFER_HTML5);
+			}
 		}
 		buffer.append(SCRIPT_END);
 		writer.write(buffer.toString());

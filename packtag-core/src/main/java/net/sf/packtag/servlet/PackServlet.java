@@ -1,49 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 17:21:11 $
- * Revision:      $Revision: 1.10 $
- * 
- * $Log: PackServlet.java,v $
- * Revision 1.10  2008/03/15 17:21:11  danielgalan
- * more Header externalized
- *
- * Revision 1.9  2008/03/15 16:38:31  danielgalan
- * Header / request cleaning
- *
- * Revision 1.8  2007/11/12 22:57:24  danielgalan
- * renamed sqp to absolutePath and fqp to mappedPath
- *
- * Revision 1.7  2007/11/06 23:10:25  danielgalan
- * Switch to new URI-semantic
- *
- * Revision 1.6  2007/10/13 20:20:22  danielgalan
- * added "Content-Type" header for MIME-Type and charset (UTF-8)
- *
- * Revision 1.5  2007/09/29 21:22:27  danielgalan
- * evaluate "If-None-Match" header
- *
- * Revision 1.4  2007/08/27 22:37:29  danielgalan
- * expire date now ten years in the future (that should be enough ;))
- *
- * Revision 1.3  2007/07/12 22:10:40  danielgalan
- * removed system.out
- *
- * Revision 1.2  2007/07/11 23:01:30  danielgalan
- * - 2.2
- *   - enhancement: caching header improved (servlet)
- *   - servlet url-mapping can be changed now (you have to set "packtag.cache.servlet.path" to the same value)
- *   - enhancement: polished the reference at http://www.galan.de/projects/packtag
- *
- * Revision 1.1  2007/04/22 19:04:25  danielgalan
- * pack.tag moved from subversion to good old CVS
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.servlet;
 
 import java.io.IOException;
@@ -66,9 +21,8 @@ import net.sf.packtag.util.RequestUtil;
  * This Servlet return the packed resources, identified thru the mapped path (and hashcode).
  * Only needed when Servlet is choosen as cachetype (default).
  * The output is gzip-compressed.
- * 
+ *
  * @author Daniel Galán y Martins
- * @version $Revision: 1.10 $
  */
 public class PackServlet extends HttpServlet {
 
@@ -117,7 +71,7 @@ public class PackServlet extends HttpServlet {
 	 * modified, and hasn't to be delivered again (Status code 304: Not modifed).
 	 * This happens when someone e.g. has the resource allready loaded, and presses the reload-button.
 	 * (Doesn't seems to work on IE6, like always)
-	 * 
+	 *
 	 * @return true if the user already has the resource
 	 */
 	private boolean isNotModifed(final HttpServletRequest request, final Resource resource) {

@@ -26,10 +26,10 @@ import net.sf.packtag.util.RequestUtil;
 
 /**
  * Gzips the content of the filtered Request
- * 
+ *
  * http://www.onjava.com/pub/a/onjava/2003/11/19/filters.html
- * 
- * @author Daniel Gal·n y Martins
+ *
+ * @author Daniel Gal√°n y Martins
  */
 public class GzipFilter implements Filter {
 

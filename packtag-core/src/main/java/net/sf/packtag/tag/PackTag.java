@@ -1,44 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- *
- * Creation date: 30.10.2007 - 09:53:32
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 21:35:49 $
- * Revision:      $Revision: 1.9 $
- *
- * $Log: PackTag.java,v $
- * Revision 1.9  2008/03/15 21:35:49  danielgalan
- * Only subdirectory, or recursivly
- *
- * Revision 1.8  2008/03/15 16:36:44  danielgalan
- * all the new features for 3.3
- *
- * Revision 1.7  2008/02/10 21:00:15  danielgalan
- * Default is now servlet
- *
- * Revision 1.6  2008/01/26 12:53:54  danielgalan
- * virtual path for combined resources (per resourcetype), resourcereload bug fixed
- *
- * Revision 1.5  2008/01/22 22:18:08  danielgalan
- * append the virtual path for combined resources on cache type servlet
- *
- * Revision 1.4  2007/11/19 19:52:44  danielgalan
- * testing for enhancing the external resources
- *
- * Revision 1.3  2007/11/12 22:57:24  danielgalan
- * renamed sqp to absolutePath and fqp to mappedPath
- *
- * Revision 1.2  2007/11/06 23:10:51  danielgalan
- * Switch to new URI-semantic
- *
- * Revision 1.1  2007/10/31 09:22:27  danielgalan
- * compress renamed to minify, tracking of resource to identify double resources
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.tag;
 
 import java.io.BufferedInputStream;
@@ -77,7 +37,6 @@ import net.sf.packtag.util.URIUtils;
  * Tag base class for resource-specific JspTags.
  *
  * @author  Daniel Galán y Martins
- * @version $Revision: 1.9 $
  */
 public abstract class PackTag extends BaseTag {
 

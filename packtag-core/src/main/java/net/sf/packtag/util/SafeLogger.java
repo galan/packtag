@@ -1,30 +1,10 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Creation date: 07.02.2008 - 21:36:11
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 21:40:03 $
- * Revision:      $Revision: 1.2 $
- * 
- * $Log: SafeLogger.java,v $
- * Revision 1.2  2008/03/15 21:40:03  danielgalan
- * Name correction...
- *
- * Revision 1.1  2008/02/10 20:59:49  danielgalan
- * SafeLogger
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.util;
 
 /**
  * Logs Events to the available Logger, Log4j, elswise System.err.
- * 
- * @author  Daniel Gal�n y Martins
- * @version $Revision: 1.2 $
+ *
+ * @author  Daniel Galán y Martins
  */
 public class SafeLogger {
 

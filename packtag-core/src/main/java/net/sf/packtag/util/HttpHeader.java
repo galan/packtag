@@ -1,30 +1,10 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- *
- * This software is published under the terms of the LGPL
- * License version 2.1, a copy of which has been included with this
- * distribution in the 'lgpl.txt' file.
- * 
- * Creation date: 12.03.2008 - 22:33:52
- * Last author:   $Author: danielgalan $
- * Last modified: $Date: 2008/03/15 17:21:11 $
- * Revision:      $Revision: 1.2 $
- * 
- * $Log: HttpHeader.java,v $
- * Revision 1.2  2008/03/15 17:21:11  danielgalan
- * more Header externalized
- *
- * Revision 1.1  2008/03/15 16:37:19  danielgalan
- * headers
- *
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.util;
 
 /**
  * List of HTTP header names
- * 
- * @author  Daniel Gal·n y Martins
- * @version $Revision: 1.2 $
+ *
+ * @author  Daniel Gal√°n y Martins
  */
 public class HttpHeader {
 

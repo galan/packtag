@@ -1,19 +1,4 @@
-/**
- * Project pack:tag >> http://packtag.sf.net
- * 
- * This software is published under the terms of the LGPL License version 2.1, a
- * copy of which has been included with this distribution in the 'lgpl.txt'
- * file.
- * 
- * Creation date: 10.02.2008 - 11:52:19 Last author: $Author: danielgalan $ Last
- * modified: $Date: 2008/03/15 21:34:08 $ Revision: $Revision: 1.2 $
- * 
- * $Log: CssMinifierPackStrategy.java,v $ Revision 1.2 2008/03/15 21:34:08
- * danielgalan Name correction
- * 
- * Revision 1.1 2008/03/15 16:34:19 danielgalan CSS Minifier by the jawr project
- * 
- */
+/* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.implementation.jawr;
 
 import java.io.InputStream;
@@ -26,12 +11,11 @@ import net.sf.packtag.strategy.PackException;
 
 
 /**
- * Wraps the CSSMinifier by Jordi Hernández Sellés, published under the Apache Licence 2.0.
+ * Wraps the CSSMinifier by Jordi Hernï¿½ndez Sellï¿½s, published under the Apache Licence 2.0.
  * See the licence.txt for more information about the Apache Licence, or go to his website:
  * https://jawr.dev.java.net/
- * 
- * @author Daniel Galán y Martins
- * @version $Revision: 1.2 $
+ *
+ * @author Daniel GalÃ¡n y Martins
  */
 public class CssMinifierPackStrategy extends CssRewritePackStrategy {
 
