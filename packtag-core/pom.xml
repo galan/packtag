@@ -5,12 +5,12 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
-		<version>3.12</version>
+		<version>3.13-SNAPSHOT</version>
 	</parent>
 
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-core</artifactId>
-	<version>3.12</version>
+	<version>33.13-SNAPSHOT</version>
 
 	<name>packtag-core - packtag taglib and servlet</name>
 	<packaging>jar</packaging>
