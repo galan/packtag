@@ -5,14 +5,14 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
-		<version>3.11</version>
+		<version>3.12</version>
 	</parent>
 
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-testsite</artifactId>
 	<packaging>war</packaging>
 	<name>packtag-testsite - contains various tests of packtag</name>
-	<version>3.11</version>
+	<version>3.12</version>
 	<url>https://github.com/galan/packtag</url>
 
 	<build>

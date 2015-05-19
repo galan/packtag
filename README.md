@@ -48,3 +48,8 @@ the packtag-x.y.zip file to e.g. packtag
 2. Copy packtag/files/packtag-x.y.jar into your web-applications WEB-INF/lib directory
 3. Copy the `<servlet>` and `<servlet-mapping>` from the packtag/files/web.xml into your
 /WEB-INF/web.xml
+
+
+# Note
+pack:tag is still supported, and still encouraged to be used if it makes sense for your project. But, no further development beyond bug fixes is expected. pack:tag is over 8 years old, and has been stable since then. Thank you to the community for your support of this project over the last years.
+
