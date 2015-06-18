@@ -35,7 +35,7 @@ public class URIUtils {
 
 
 	private static String cleanCurrentdirs(final String path) {
-		String result = path.replaceAll("/./", "/");
+		String result = path.replaceAll("/\\./", "/");
 		if (result.indexOf("/./") != -1) {
 			result = cleanCurrentdirs(result);
 		}
