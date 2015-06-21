@@ -10,7 +10,7 @@
 
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-core</artifactId>
-	<version>33.13-SNAPSHOT</version>
+	<version>3.13-SNAPSHOT</version>
 
 	<name>packtag-core - packtag taglib and servlet</name>
 	<packaging>jar</packaging>
