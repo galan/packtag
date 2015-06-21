@@ -1,3 +1,6 @@
+- 3.13
+  - fix: fix removing one letter folders from path during resources rewrite (by jakubkrolikowski)
+
 - 3.12
   - fix: Fixed tomcat 8/java 8 compatibility-issue (by liggiotti)
   - update: Changed licence from LGPLv2.1 to ASLv2
