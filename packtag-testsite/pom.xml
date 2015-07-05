@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
 <project>
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.galan.packtag</groupId>
+	<artifactId>packtag-testsite</artifactId>
+	<version>3.13-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>packtag-testsite - contains various tests of packtag</name>
+	<description>A JSP Taglib for delivering minified, combined and gzip-compressed resources (JavaScript and CSS).</description>
+	<url>https://github.com/galan/packtag</url>
 
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
 		<version>3.13-SNAPSHOT</version>
 	</parent>
-
-	<groupId>de.galan.packtag</groupId>
-	<artifactId>packtag-testsite</artifactId>
-	<packaging>war</packaging>
-	<name>packtag-testsite - contains various tests of packtag</name>
-	<version>3.13-SNAPSHOT</version>
-	<url>https://github.com/galan/packtag</url>
 
 	<build>
 		<plugins>
@@ -39,6 +40,13 @@
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.2.2.v20140723</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

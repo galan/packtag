@@ -1,20 +1,19 @@
 <?xml version="1.0"?>
 <project>
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.galan.packtag</groupId>
+	<artifactId>packtag-core</artifactId>
+	<version>3.13-SNAPSHOT</version>
+
+	<name>packtag-core - packtag taglib and servlet</name>
+	<description>A JSP Taglib for delivering minified, combined and gzip-compressed resources (JavaScript and CSS).</description>
+	<url>https://github.com/galan/packtag</url>
 
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
 		<version>3.13-SNAPSHOT</version>
 	</parent>
-
-	<groupId>de.galan.packtag</groupId>
-	<artifactId>packtag-core</artifactId>
-	<version>3.13-SNAPSHOT</version>
-
-	<name>packtag-core - packtag taglib and servlet</name>
-	<packaging>jar</packaging>
-	<url>https://github.com/galan/packtag</url>
 
 	<dependencies>
 		<dependency>
@@ -31,12 +30,6 @@
 		<dependency>
 			<groupId>com.yahoo.platform.yui</groupId>
 			<artifactId>yuicompressor</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.yahoo.platform.yui</groupId>
-			<artifactId>yuicompressor</artifactId>
-			<version>2.2.5</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>

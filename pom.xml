@@ -7,19 +7,33 @@
 	<packaging>pom</packaging>
 
 	<name>packtag</name>
-	<description>pack:tag</description>
+	<description>A JSP Taglib for delivering minified, combined and gzip-compressed resources (JavaScript and CSS).</description>
 	<url>https://github.com/galan/packtag</url>
 	<inceptionYear>2007</inceptionYear>
 
 	<properties>
 		<jdk.compiler.version>1.4</jdk.compiler.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<plugin.maven-compiler.version>3.3</plugin.maven-compiler.version>
+		<plugin.maven-resources.version>2.7</plugin.maven-resources.version>
+		<plugin.maven-jar.version>2.5</plugin.maven-jar.version>
+		<plugin.maven-surefire.version>2.18.1</plugin.maven-surefire.version>
+		<plugin.checkstyle.version>2.13</plugin.checkstyle.version>
+		<plugin.maven-source.version>2.4</plugin.maven-source.version>
+		<plugin.maven-deploy.version>2.8.2</plugin.maven-deploy.version>
+		<plugin.nexus-staging.version>1.6.5</plugin.nexus-staging.version>
 	</properties>
 
-	<parent>
-		<groupId>de.galan</groupId>
-		<artifactId>parent</artifactId>
-		<version>0.5</version>
-	</parent>
+	<prerequisites>
+		<maven>3.1.1</maven>
+	</prerequisites>
+
+	<scm>
+		<developerConnection>scm:git:ssh://git@github.com/galan/packtag.git</developerConnection>
+		<connection>git@github.com:galan/packtag.git</connection>
+		<url>https://github.com/galan/packtag</url>
+	</scm>
 
 	<licenses>
 		<license>
@@ -28,6 +42,20 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<developers>
+		<developer>
+			<id>galan</id>
+			<url>http://www.galan.de</url>
+			<name>Daniel Galán y Martins</name>
+			<email>maven -at(@)- galan -dot(.)- de</email>
+			<roles>
+				<role>Owner</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
 
 	<contributors>
 		<contributor>
@@ -73,26 +101,20 @@
 				<role>contributor</role>
 			</roles>
 		</contributor>
+		<contributor>
+			<name>jakubkrolikowski</name>
+			<url>https://github.com/jakubkrolikowski</url>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</contributor>
 	</contributors>
 
 	<issueManagement>
-		<system>SourceForge.net Bugtracker</system>
+		<system>github</system>
 		<url>https://github.com/galan/packtag/issues></url>
 	</issueManagement>
 
-	<scm>
-		<connection>git@github.com:galan/packtag.git</connection>
-		<url>https://github.com/galan/packtag</url>
-	</scm>
-
-	<repositories>
-		<repository>
-			<id>maven2-repository.dev.java.net</id>
-			<name>Java.net Repository for Maven</name>
-			<url>http://download.java.net/maven/2/</url>
-			<layout>default</layout>
-		</repository>
-	</repositories>
 
 
 	<!-- Here we list of our dependencies and their version numbers.
@@ -163,9 +185,126 @@
 				<version>3.8.1</version>
 				<scope>test</scope>
 			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${plugin.maven-compiler.version}</version>
+				<configuration>
+					<source>${jdk.compiler.version}</source>
+					<target>${jdk.compiler.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${plugin.maven-resources.version}</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${plugin.maven-jar.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${plugin.maven-surefire.version}</version>
+				<configuration>
+					<excludes>
+						<exclude>de/galan/**/*IT</exclude>
+						<exclude>de/galan/**/excluded/**/*</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${plugin.checkstyle.version}</version>
+				<configuration>
+					<configLocation>.settings/checkstyle.xml</configLocation>
+					<failsOnError>true</failsOnError>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- required to bundle source files in deployment -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${plugin.maven-source.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>${plugin.maven-deploy.version}</version>
+				<configuration>
+					<!-- Adds a <release> tag to the maven-metadata, so we can know which is the latest deployed version -->
+					<updateReleaseInfo>true</updateReleaseInfo>
+				</configuration>
+			</plugin>
+
+			<!--
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>${plugin.nexus-staging.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>sonatype-nexus-staging</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
+			-->
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${plugin.checkstyle.version}</version>
+				<configuration>
+					<configLocation>.settings/checkstyle.xml</configLocation>
+					<failsOnError>true</failsOnError>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>sonatype-nexus-staging</id>
+			<name>Nexus Release Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 
 
 	<modules>
