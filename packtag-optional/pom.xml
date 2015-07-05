@@ -4,6 +4,7 @@
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-optional</artifactId>
 	<version>3.13.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
 	<name>packtag-optional - meta pom for optional dependencies</name>
 	<description>A JSP Taglib for delivering minified, combined and gzip-compressed resources (JavaScript and CSS).</description>
