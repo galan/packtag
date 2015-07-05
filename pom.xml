@@ -24,6 +24,9 @@
 		<plugin.maven-deploy.version>2.8.2</plugin.maven-deploy.version>
 		<plugin.nexus-staging.version>1.6.5</plugin.nexus-staging.version>
 		<plugin.maven-release.version>2.5.2</plugin.maven-release.version>
+		<plugin.maven-javadoc.version>2.10.3</plugin.maven-javadoc.version>
+		<plugin.maven-source.version>2.4</plugin.maven-source.version>
+		<plugin.maven-gpg.version>1.6</plugin.maven-gpg.version>
 	</properties>
 
 	<prerequisites>
@@ -271,6 +274,39 @@
 					<!-- Adds a <release> tag to the maven-metadata, so we can know which is the latest deployed version -->
 					<updateReleaseInfo>true</updateReleaseInfo>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>${plugin.maven-gpg.version}</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<!-- required to bundle javadoc files in deployment -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${plugin.maven-javadoc.version}</version>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 			<!--
