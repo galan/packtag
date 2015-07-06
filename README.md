@@ -36,17 +36,15 @@ If you want to deepen your knowledge and learn about advanced techniques, I sugg
 
 # Integration
 
-## Maven (preferred)
-1. Use the [maven repository and artifact](https://github.com/galan/maven-repository) on github.
+1. Add the maven dependency to your project:
+
+    <dependency>
+        <groupId>de.galan.packtag</groupId>
+        <artifactId>packtag-core</artifactId>
+        <version>3.11</version>
+    </dependency>
+
 2. Copy the `<servlet>` and `<servlet-mapping>` from the [web.xml](https://github.com/galan/packtag/blob/master/packtag-testsite/src/main/webapp/WEB-INF/web.xml) into your
-/WEB-INF/web.xml
-
-## Manual
-
-1. Download the pack:tag archive from https://github.com/galan/packtag/releases and unpack
-the packtag-x.y.zip file to e.g. packtag
-2. Copy packtag/files/packtag-x.y.jar into your web-applications WEB-INF/lib directory
-3. Copy the `<servlet>` and `<servlet-mapping>` from the packtag/files/web.xml into your
 /WEB-INF/web.xml
 
 
