@@ -1,4 +1,5 @@
-- 3.13
+- 3.13.0
+  - pack:tag is now available using the Maven Central Repository 
   - fix: fix removing one letter folders from path during resources rewrite (by jakubkrolikowski)
 
 - 3.12
