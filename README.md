@@ -1,3 +1,7 @@
+[![Build Status](https://img.shields.io/travis/galan/packtag.svg?style=flat)](https://travis-ci.org/galan/packtag)
+[![Maven Central](https://img.shields.io/maven-central/v/de.galan.packtag/packtag-core.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/de.galan.packtag/packtag-core)
+[![License](https://img.shields.io/github/license/galan/packtag.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
 # pack:tag
 
 A JSP Taglib for delivering minified, combined and gzip-compressed resources (JavaScript and CSS).
