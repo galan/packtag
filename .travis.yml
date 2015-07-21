@@ -1,0 +1,6 @@
+language: java
+# Don't check gpg keys, don't run tests on install, will be called on "mvn test" later anyway
+install: mvn install -Dgpg.skip=true -DskipTests=true
+
+jdk:
+  - oraclejdk8
