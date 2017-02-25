@@ -38,6 +38,9 @@ public class GzipFilter implements Filter {
 			HttpServletRequest request = (HttpServletRequest)req;
 			HttpServletResponse response = (HttpServletResponse)res;
 			response.setHeader(HttpHeader.BRANDING_HEADER, HttpHeader.BRANDING_VALUE);
+			if(request.getHeader(HttpHeader.ACCEPTED_ENCODING) != null) {
+				response.setHeader(HttpHeader.VARY, HttpHeader.ACCEPTED_ENCODING);
+			}
 			if (RequestUtil.isGZipSupported(request)) {
 				GzipResponseWrapper wrappedResponse = new GzipResponseWrapper(response);
 				chain.doFilter(req, wrappedResponse);

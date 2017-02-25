@@ -16,6 +16,7 @@ public class HttpHeader {
 	public static final String CACHE_CONTROL = "Cache-Control";
 	public static final String EXPIRES = "Expires";
 	public static final String ETAG = "ETag";
+	public static final String VARY = "Vary";
 
 	public static final String CACHE_CONTROL_PRIVATE = "private";
 	public static final String GZIP = "gzip";
