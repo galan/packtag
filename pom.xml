@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-parent</artifactId>
-	<version>3.13.1-SNAPSHOT</version>
+	<version>3.13.1</version>
 	<packaging>pom</packaging>
 
 	<name>packtag</name>
@@ -37,7 +37,7 @@
 		<developerConnection>scm:git:ssh://git@github.com/galan/packtag.git</developerConnection>
 		<connection>git@github.com:galan/packtag.git</connection>
 		<url>https://github.com/galan/packtag</url>
-	  <tag>HEAD</tag>
+	  <tag>packtag-3.13.1</tag>
   </scm>
 
 	<licenses>
