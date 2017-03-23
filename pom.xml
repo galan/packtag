@@ -113,6 +113,13 @@
 				<role>contributor</role>
 			</roles>
 		</contributor>
+		<contributor>
+			<name>oehmiche</name>
+			<url>https://github.com/oehmiche</url>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</contributor>
 	</contributors>
 
 	<issueManagement>

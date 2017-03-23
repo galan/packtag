@@ -1,3 +1,7 @@
+- 3.13.1
+  - fixes #12 - adds the vary header to the response created by the GzipFilter
+    (by https://github.com/oehmiche)
+
 - 3.13.0
   - pack:tag is now available using the Maven Central Repository 
   - fix: fix removing one letter folders from path during resources rewrite (by jakubkrolikowski)
