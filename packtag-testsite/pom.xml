@@ -63,6 +63,7 @@
 			<groupId>de.galan.packtag</groupId>
 			<artifactId>packtag-optional</artifactId>
 			<version>${project.version}</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
