@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-testsite</artifactId>
-	<version>3.13.2-SNAPSHOT</version>
+	<version>3.13.2</version>
 	<packaging>war</packaging>
 
 	<name>packtag-testsite - contains various tests of packtag</name>
@@ -13,7 +13,7 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
-		<version>3.13.2-SNAPSHOT</version>
+		<version>3.13.2</version>
 	</parent>
 
 	<build>
