@@ -4,10 +4,10 @@ package net.sf.packtag.servlet;
 import java.io.IOException;
 import java.util.Date;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import net.sf.packtag.cache.PackCache;
 import net.sf.packtag.cache.Resource;

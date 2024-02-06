@@ -1,7 +1,7 @@
 /* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.cache;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import net.sf.packtag.util.ContextConfiguration;
 

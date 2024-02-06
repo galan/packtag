@@ -133,28 +133,27 @@
 		this makes it easy to maintain consistent versions across different modules -->
 	<dependencyManagement>
 		<dependencies>
-			<!-- I substituted this for the jakarta one -->
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>jstl</artifactId>
-				<version>1.1.2</version>
+				<groupId>jakarta.servlet.jsp.jstl</groupId>
+				<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+				<version>3.0.0</version>
 			</dependency>
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>servlet-api</artifactId>
-				<version>2.4</version>
+				<groupId>jakarta.servlet</groupId>
+				<artifactId>jakarta.servlet-api</artifactId>
+				<version>6.0.0</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>jsp-api</artifactId>
-				<version>2.0</version>
+				<groupId>jakarta.servlet.jsp</groupId>
+				<artifactId>jakarta.servlet.jsp-api</artifactId>
+				<version>3.1.1</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>taglibs</groupId>
-				<artifactId>standard</artifactId>
-				<version>1.1.2</version>
+				<groupId>org.glassfish.web</groupId>
+				<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+				<version>3.0.1</version>
 				<optional>true</optional>
 			</dependency>
 
