@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.zip.GZIPOutputStream;
 
 import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.WriteListener;
 import jakarta.servlet.http.HttpServletResponse;
 
 import net.sf.packtag.util.HttpHeader;
@@ -91,6 +92,14 @@ public class GzipResponseStream extends ServletOutputStream {
 
 	public void reset() {
 		// nada
+	}
+
+	public void setWriteListener(WriteListener writeListener){
+		output.setWriteListener(writeListener);
+	}
+
+	public boolean isReady() {
+		return output.isReady();
 	}
 
 }
