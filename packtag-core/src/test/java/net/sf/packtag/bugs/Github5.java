@@ -7,7 +7,8 @@ import java.io.FileReader;
 import java.io.StringWriter;
 import java.nio.charset.Charset;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import net.sf.packtag.implementation.JSMin;
 import net.sf.packtag.implementation.JsminPackStrategy;
 
@@ -18,8 +19,9 @@ import net.sf.packtag.implementation.JsminPackStrategy;
  *
  * @author Daniel Galán y Martins
  */
-public class Github5 extends TestCase {
+public class Github5 {
 
+	@Test
 	public void testBug() throws Exception {
 		FileReader reader = new FileReader(new File("packtag/packtag-testsite/src/main/webapp/js/moment-2.9.0.min.js"));
 		StringWriter sw = new StringWriter();
@@ -29,6 +31,7 @@ public class Github5 extends TestCase {
 	}
 
 
+	@Test
 	public void testStrategy() throws Exception {
 		FileInputStream fis = new FileInputStream(new File("packtag/packtag-testsite/src/main/webapp/js/moment-2.9.0.min.js"));
 		JsminPackStrategy strategy = new JsminPackStrategy();

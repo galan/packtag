@@ -3,6 +3,8 @@ package net.sf.packtag.test;
 
 import net.sf.packtag.implementation.JsminPackStrategy;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 /**
@@ -12,6 +14,7 @@ import net.sf.packtag.implementation.JsminPackStrategy;
  */
 public class JsminPackStrategyTest extends AbstractPacktagTestCase {
 
+	@Test
 	public void testCompressorOne() throws Exception {
 		JsminPackStrategy strategy = new JsminPackStrategy();
 		String result = strategy.pack(JsminPackStrategyTest.class.getResourceAsStream("js01.js"), getDefaultCharset(), null);

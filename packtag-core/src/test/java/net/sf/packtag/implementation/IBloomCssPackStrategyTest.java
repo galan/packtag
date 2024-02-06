@@ -3,6 +3,9 @@ package net.sf.packtag.implementation;
 
 import net.sf.packtag.test.AbstractPacktagTestCase;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 
 /**
@@ -12,6 +15,7 @@ import net.sf.packtag.test.AbstractPacktagTestCase;
  */
 public class IBloomCssPackStrategyTest extends AbstractPacktagTestCase {
 
+	@Test
 	public void testCompressorOne() throws Exception {
 		IBloomCssPackStrategy strategy = new IBloomCssPackStrategy();
 		String result = strategy.pack(IBloomCssPackStrategyTest.class.getResourceAsStream("css01.css"), getDefaultCharset(), null);

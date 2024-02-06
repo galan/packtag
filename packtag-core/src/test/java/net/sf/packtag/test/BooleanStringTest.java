@@ -1,8 +1,8 @@
 /* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.test;
 
-import junit.framework.TestCase;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 /**
@@ -10,9 +10,11 @@ import junit.framework.TestCase;
  *
  * @author  Daniel Galán y Martins
  */
-public class BooleanStringTest extends TestCase {
+public class BooleanStringTest {
 
+	@Test
 	public void testBooleanString() {
+
 		assertEquals("true", Boolean.TRUE.toString());
 		assertEquals("false", Boolean.FALSE.toString());
 	}
