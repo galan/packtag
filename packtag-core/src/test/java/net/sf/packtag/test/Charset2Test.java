@@ -1,17 +1,19 @@
 package net.sf.packtag.test;
 import java.nio.charset.Charset;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.fail;
 
 
 
-public class Charset2Test extends TestCase {
+public class Charset2Test {
 
 	private static final String LATIN_9 = "ISO-8859-15";
 
 	private static final String UTF8 = "ISO-8859-15";
 
 
+	@Test
 	public void testCharsetConversation() throws Exception {
 		//wrong test case input text is right encoding.
 		String text = new String("Hello World ??".getBytes(UTF8), UTF8);
@@ -33,6 +35,7 @@ public class Charset2Test extends TestCase {
 	}
 
 
+	@Test
 	public void testCharsetConversation2() throws Exception {
 		String wrongInputText = new String("Hello World ??".getBytes("UTF-8"), "ISO8859_1");
 		System.out.println("wrong input encoding:" + wrongInputText);

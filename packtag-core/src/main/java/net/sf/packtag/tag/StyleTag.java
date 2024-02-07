@@ -1,7 +1,7 @@
 /* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.tag;
 
-import javax.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.JspWriter;
 
 import net.sf.packtag.implementation.IBloomCssPackStrategy;
 import net.sf.packtag.strategy.PackStrategy;

@@ -3,6 +3,8 @@ package net.sf.packtag.test;
 
 import net.sf.packtag.implementation.yui.YuiCompressorPackStrategy;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 /**
@@ -13,6 +15,7 @@ import net.sf.packtag.implementation.yui.YuiCompressorPackStrategy;
  */
 public class YuiCompressorTest extends AbstractPacktagTestCase {
 
+	@Test
 	public void testYui() throws Exception {
 		YuiCompressorPackStrategy strategy = new YuiCompressorPackStrategy();
 		strategy.pack(YuiCompressorTest.class.getResourceAsStream("js01.js"), getDefaultCharset(), null);

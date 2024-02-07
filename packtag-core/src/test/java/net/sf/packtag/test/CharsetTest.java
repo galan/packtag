@@ -3,7 +3,8 @@ package net.sf.packtag.test;
 
 import java.nio.charset.Charset;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.fail;
 
 
 
@@ -12,12 +13,13 @@ import junit.framework.TestCase;
  *
  * @author  Daniel Galán y Martins
  */
-public class CharsetTest extends TestCase {
+public class CharsetTest {
 
 	private static final String LATIN_9 = "ISO-8859-15";
 	private static final String UTF8 = "ISO-8859-15";
 
 
+	@Test
 	public void testCharsetConversation() throws Exception {
 		String text = new String("Hello World �����".getBytes(UTF8), UTF8);
 		byte[] bytesGet = text.getBytes(LATIN_9);

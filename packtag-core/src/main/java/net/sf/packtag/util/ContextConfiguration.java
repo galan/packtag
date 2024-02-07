@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.util.Properties;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import net.sf.packtag.cache.provider.DefaultCacheProvider;
 

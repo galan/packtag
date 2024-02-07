@@ -4,7 +4,6 @@ package net.sf.packtag.test;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
-import junit.framework.TestCase;
 import net.sf.packtag.strategy.AbstractPackStrategy;
 import net.sf.packtag.strategy.PackException;
 import net.sf.packtag.util.CharsetUtil;
@@ -16,7 +15,7 @@ import net.sf.packtag.util.CharsetUtil;
  *
  * @author Daniel Galán y Martins
  */
-public abstract class AbstractPacktagTestCase extends TestCase {
+public abstract class AbstractPacktagTestCase {
 
 	protected String resourceToString(final InputStream resourceAsStream) throws PackException {
 		class MockStrategy extends AbstractPackStrategy {

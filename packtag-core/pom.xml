@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.galan.packtag</groupId>
 	<artifactId>packtag-core</artifactId>
-	<version>3.13.3-SNAPSHOT</version>
+	<version>4.0.0-SNAPSHOT</version>
 
 	<name>packtag-core - packtag taglib and servlet</name>
 	<description>A JSP Taglib for delivering minified, combined and gzip-compressed resources (JavaScript and CSS).</description>
@@ -12,19 +12,19 @@
 	<parent>
 		<artifactId>packtag-parent</artifactId>
 		<groupId>de.galan.packtag</groupId>
-		<version>3.13.3-SNAPSHOT</version>
+		<version>4.0.0-SNAPSHOT</version>
 	</parent>
 
 	<dependencies>
 		<dependency>
-			<groupId>net.sf.ehcache</groupId>
-			<artifactId>ehcache</artifactId>
-			<version>1.5.0</version>
+			<groupId>javax.cache</groupId>
+			<artifactId>cache-api</artifactId>
+			<version>1.1.1</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>net.jawr</groupId>
-			<artifactId>jawr</artifactId>
+			<artifactId>jawr-core</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -33,34 +33,28 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging-api</artifactId>
-			<version>1.1</version>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
+			<groupId>jakarta.servlet.jsp</groupId>
+			<artifactId>jakarta.servlet.jsp-api</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jsp-api</artifactId>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-			<optional>true</optional>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<optional>false</optional>
 		</dependency>
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
