@@ -160,17 +160,17 @@
 			</dependency>
 
 			<dependency>
-				<groupId>rhino</groupId>
-				<artifactId>js</artifactId>
-				<version>1.6R7</version>
+				<groupId>org.mozilla</groupId>
+				<artifactId>rhino</artifactId>
+				<version>1.7.14</version>
 				<optional>true</optional>
 			</dependency>
 
 			<!-- used in the webapp -->
 			<dependency>
 				<groupId>net.jawr</groupId>
-				<artifactId>jawr</artifactId>
-				<version>1.4</version>
+				<artifactId>jawr-core</artifactId>
+				<version>3.9</version>
 				<optional>true</optional>
 			</dependency>
 

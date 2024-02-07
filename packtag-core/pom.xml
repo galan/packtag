@@ -24,7 +24,7 @@
 		</dependency>
 		<dependency>
 			<groupId>net.jawr</groupId>
-			<artifactId>jawr</artifactId>
+			<artifactId>jawr-core</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
