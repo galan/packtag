@@ -1,3 +1,10 @@
+- 4.0.0-SNAPSHOT
+  - migrate to jakarta-based dependencies (e.g. javax.servlet -> jakarta.servlet)
+  - updated runtime requirement: JDK 17 or above
+  - removed ehcache v1 support
+  - add jsr-107 JCache support
+  - use log4j2-api instead of log4j v1 and commons-logging
+
 - 3.13.2
   - fixes #12 - adds the vary header to the response created by the GzipFilter
     (by https://github.com/oehmiche)
