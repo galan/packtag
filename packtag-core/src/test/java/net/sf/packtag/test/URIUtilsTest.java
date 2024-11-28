@@ -1,7 +1,8 @@
 /* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.test;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import net.sf.packtag.util.URIUtils;
 
 
@@ -11,8 +12,9 @@ import net.sf.packtag.util.URIUtils;
  *
  * @author  Daniel Galán y Martins
  */
-public class URIUtilsTest extends TestCase {
+public class URIUtilsTest {
 
+	@Test
 	public void testSubdirs() {
 		assertEquals("/dummyCompress.css", URIUtils.cleanRelativePath("/dummyCompress.css"));
 		assertEquals("/packtag/style/dummyCompress.css", URIUtils.cleanRelativePath("/packtag/style/dummyCompress.css"));
@@ -24,7 +26,7 @@ public class URIUtilsTest extends TestCase {
 		assertEquals("/style/dummyCompress.css", URIUtils.cleanRelativePath("/packtag/../style/dummyCompress.css"));
 	}
 
-
+	@Test
 	public void testCurrentDirs() {
 		assertEquals("/style/dummyCompress.css", URIUtils.cleanRelativePath("/style/./dummyCompress.css"));
 		assertEquals("/style/dummyCompress.css", URIUtils.cleanRelativePath("/./style/././dummyCompress.css"));
@@ -32,11 +34,13 @@ public class URIUtilsTest extends TestCase {
 	}
 
 
+	@Test
 	public void testAbsolutePath() {
 		assertEquals("/packtag/style/dummyCompress.css", URIUtils.cleanRelativePath("/packtag/./style/./blablup/../dummyCompress.css"));
 	}
 
 
+	@Test
 	public void testSubdirDoesNotExists() {
 		assertEquals("/style/dummyCompress.css", URIUtils.cleanRelativePath("/../style/dummyCompress.css"));
 	}

@@ -45,7 +45,7 @@ If you want to deepen your knowledge and learn about advanced techniques, I sugg
         <dependency>
             <groupId>de.galan.packtag</groupId>
             <artifactId>packtag-core</artifactId>
-            <version>3.13.2</version>
+            <version>4.0.0=SNAPSHOT</version>
         </dependency>
 
 2. Copy the `<servlet>` and `<servlet-mapping>` from the [web.xml](https://github.com/galan/packtag/blob/master/packtag-testsite/src/main/webapp/WEB-INF/web.xml) into your

@@ -1,7 +1,7 @@
 /* Project pack:tag >> https://github.com/galan/packtag */
 package net.sf.packtag.util;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 
 
