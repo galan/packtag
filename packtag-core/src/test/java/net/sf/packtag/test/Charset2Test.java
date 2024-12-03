@@ -38,7 +38,7 @@ public class Charset2Test {
 	@Test
 	public void testCharsetConversation2() throws Exception {
 		String wrongInputText = new String("Hello World ??".getBytes("UTF-8"), "ISO8859_1");
-		System.out.println("wrong input encoding:" + wrongInputText);
+		//System.out.println("wrong input encoding:" + wrongInputText);
 		//inputsream encoding is "ISO8859_1"
 		String text = new String(wrongInputText.getBytes(UTF8), UTF8);
 		byte[] bytesGet = text.getBytes(LATIN_9);

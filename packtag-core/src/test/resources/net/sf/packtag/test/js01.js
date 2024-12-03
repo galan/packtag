@@ -15,5 +15,6 @@ var xPackage = {
     
     dudelidu: function(message) {
     	var mes = message + " space text ";
+      alert(mes);
     }
 }
