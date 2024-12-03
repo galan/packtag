@@ -1,4 +1,4 @@
-- 4.0.0-SNAPSHOT
+- 4.0.0
   - migrate to jakarta-based dependencies (e.g. javax.servlet -> jakarta.servlet)
   - updated runtime requirement: JDK 17 or above
   - removed ehcache v1 support
